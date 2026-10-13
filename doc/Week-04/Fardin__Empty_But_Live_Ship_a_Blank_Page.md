@@ -27,7 +27,7 @@ The starter page has been pushed to the remote repository (Commit `9780e4f`) and
 * **The Through-Line Claim:** *“I build leak-free ranking models that help business teams prioritize content on cold-start search domains.”*
 * **Navigation Links:** Direct links to the Camera-Ready Research Paper (`/docs`), GitHub Monorepo, and email contact.
 
-*Local Verified Screenshot:* [`General AI Fluency/screenshot_empty_but_live.png`](file:///d:/My%20All%20Project/FlyRankAI-ML-Internship-Task/General%20AI%20Fluency/screenshot_empty_but_live.png)
+*Local Verified Screenshot:* [`./screenshot_empty_but_live.png`](./screenshot_empty_but_live.png)
 
 ---
 

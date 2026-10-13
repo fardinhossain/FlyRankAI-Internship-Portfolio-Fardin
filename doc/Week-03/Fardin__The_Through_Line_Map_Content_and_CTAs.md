@@ -70,8 +70,8 @@ I tested 10 candidate claims using AI as a sparring partner to distill the most 
 
 | Asset Required | Source / Location in Repo | Current Status | Action Plan / Next Step |
 | :--- | :--- | :---: | :--- |
-| **DuckDB CLI Terminal Log** | `General AI Fluency/real_capture_duckdb_terminal.png` | **READY** | Cropped, verified 300 DPI image showing 78.8M rows in 4.18s. |
-| **Cost-Value Decision Matrix** | `General AI Fluency/real_capture_cost_value_matrix.png` | **READY** | Exported directly from `paper/figures/cost_value_matrix.png`. |
+| **DuckDB CLI Terminal Log** | `./real_capture_duckdb_terminal.png` | **READY** | Cropped, verified 300 DPI image showing 78.8M rows in 4.18s. |
+| **Cost-Value Decision Matrix** | `./real_capture_cost_value_matrix.png` | **READY** | Exported directly from `paper/figures/cost_value_matrix.png`. |
 | **6-Page IEEE Research Paper** | `paper/main.pdf` | **READY** | Full IEEE paper written, compiled via LaTeX, and verified in repo. |
 | **Demo Walkthrough Outline** | `work/demo_outline_and_shareable_cuts.md` | **READY** | 5-minute presentation script and two shareable cuts drafted. |
 | **Professional Headshot Photo** | Bio Card on Landing / Contact | **GATHERING** | Crop a high-res, natural daylight 1:1 portrait before Week 5 deploy. |

@@ -33,11 +33,11 @@ Every image in the final set maps to a specific section of the Week 3 content ma
 ## 🔬 2. Real Capture Showcase (From Local Workspace)
 
 1. **Figure 1.1: DuckDB Out-of-Core Aggregation Log**  
-   *File:* [`General AI Fluency/real_capture_duckdb_terminal.png`](file:///d:/My%20All%20Project/FlyRankAI-ML-Internship-Task/General%20AI%20Fluency/real_capture_duckdb_terminal.png)  
+   *File:* [`./real_capture_duckdb_terminal.png`](./real_capture_duckdb_terminal.png)  
    *Proof:* Ingests and groups `78,829,142` Google Search Console telemetry records across 24 client domains in `4.182s` real time, demonstrating production database mastery.
 
 2. **Figure 1.2: Cost-Value Opportunity Matrix**  
-   *File:* [`General AI Fluency/real_capture_cost_value_matrix.png`](file:///d:/My%20All%20Project/FlyRankAI-ML-Internship-Task/General%20AI%20Fluency/real_capture_cost_value_matrix.png)  
+   *File:* [`./real_capture_cost_value_matrix.png`](./real_capture_cost_value_matrix.png)  
    *Proof:* Authentic Seaborn/Matplotlib empirical plot derived from capstone model inferences, separating low-effort high-impact refresh URLs from volatile noise.
 
 ---

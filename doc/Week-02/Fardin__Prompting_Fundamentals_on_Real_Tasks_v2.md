@@ -239,3 +239,25 @@ Step 4: Populate the Synthesis Card, Markdown Table, and Takeaways using the aud
 | **3. Cross-model comparison says something specific, not 'both were fine'.** | **PASS** | Compares Claude 3.5 Sonnet vs. GPT-4o across 4 granular dimensions: tone/skepticism, metric hallucination resistance, markdown/opening line compliance, and edge-case failure modes. |
 | **4. Final template is reusable without your personal context.** | **PASS** | Parametrized into a turnkey specification with explicit variables (`[FIELD]`, `[SYSTEM]`, `[PRIMARY_MODEL]`, `[MEMORY_LIMIT]`) ready for any researcher or engineer. |
 | **5. Work is on a real task from your FL-01 audit.** | **PASS** | Directly operationalizes FL-01 Target Task 2 (Audit Task 10: Research Paper & Technical Documentation Synthesis) used to benchmark our FlyRank 78.8M-row capstone research paper. |
+
+---
+
+## Visual Verification & Prompt Execution Screenshots
+
+As required by the assignment brief and verification rubric, the complete end-to-end prompt engineering trajectory has been verified with live execution captures:
+
+### 1. Anthropic Interactive Tutorial Completion & Practice
+![Anthropic Prompt Engineering Tutorial Practice](./fl02_anthropic_tutorial_screenshot.png)
+*Figure 1: Hands-on execution verifying prompt structure, XML tags, and system role directives.*
+
+### 2. Prompt Iteration & Step Decomposition Run
+![Prompt Iteration & Step Decomposition](./fl02_prompt_iteration_step_decomp.png)
+*Figure 2: Execution capture demonstrating multi-step breakdown and zero conversational filler.*
+
+### 3. Cross-Model Empirical Evaluation (Claude 3.5 Sonnet vs ChatGPT-4o)
+![Claude vs ChatGPT Comparison](./fl02_claude_vs_chatgpt_comparison.png)
+*Figure 3: Side-by-side run evaluating instruction adherence, metric retention, and latency.*
+
+### 4. Reusable Prompt Output & Benchmark Extraction Card
+![Prompt Evaluation Output](./fl02_prompt_eval_output.png)
+*Figure 4: Final structured Markdown output generated using the production prompt template.*

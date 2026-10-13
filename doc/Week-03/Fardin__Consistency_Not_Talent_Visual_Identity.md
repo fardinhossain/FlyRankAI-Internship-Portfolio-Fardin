@@ -72,7 +72,7 @@ To guarantee that Week 4/5 build weeks are never blocked, all necessary assets h
 | **Single Accent** *(Quiet Authority)* | **`#0284C7`** (Sky-600)<br>Active States: `#0369A1` (Sky-700) | **Contrast Ratio: 4.7:1** against `#FFFFFF` (passes WCAG AA). Used strictly for interactive buttons, links, and key metric badges. Never upstages data. |
 
 ### Favicon & Minimalist Logo:
-* Generated asset: [`General AI Fluency/favicon.svg`](file:///d:/My%20All%20Project/FlyRankAI-ML-Internship-Task/General%20AI%20Fluency/favicon.svg)
+* Generated asset: [`./favicon.svg`](./favicon.svg)
 * Design: Minimalist terminal-inspired square badge (`#09090B`) with an inner zinc border and a sharp sky-blue terminal prompt `>` and rank cursor `_` (`#0284C7`). Represents data-driven command-line execution.
 
 ### The Two-Line Style Note (Saved to Claude Project Instructions):

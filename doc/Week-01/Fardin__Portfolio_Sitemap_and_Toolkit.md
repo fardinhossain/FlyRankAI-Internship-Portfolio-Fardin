@@ -70,7 +70,7 @@
 
 ### Visual Sitemap Diagram
 The high-resolution sitemap sketch diagram is saved locally at:  
-`General AI Fluency/sitemap_sketch.png`
+`./sitemap_sketch.png`
 
 ---
 

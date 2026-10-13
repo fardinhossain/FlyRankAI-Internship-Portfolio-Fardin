@@ -18,8 +18,8 @@
 ```
 
 * **Visual Assets Generated:**
-  * **Logo Wordmark:** [`General AI Fluency/logo.svg`](file:///d:/My%20All%20Project/FlyRankAI-ML-Internship-Task/General%20AI%20Fluency/logo.svg) & [`logo.png`](file:///d:/My%20All%20Project/FlyRankAI-ML-Internship-Task/General%20AI%20Fluency/logo.png)
-  * **Browser Favicon:** [`General AI Fluency/favicon.svg`](file:///d:/My%20All%20Project/FlyRankAI-ML-Internship-Task/General%20AI%20Fluency/favicon.svg) & [`favicon.png`](file:///d:/My%20All%20Project/FlyRankAI-ML-Internship-Task/General%20AI%20Fluency/favicon.png)
+  * **Logo Wordmark:** [`./logo.svg`](./logo.svg) & [`logo.png`](./logo.png)
+  * **Browser Favicon:** [`./favicon.svg`](./favicon.svg) & [`favicon.png`](./favicon.png)
 
 ---
 
