@@ -3,66 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fardin Hossain — AI & Machine Learning Systems Engineer</title>
-  <meta name="description" content="Portfolio of Fardin Hossain — AI/ML Systems Engineer specializing in out-of-core tabular ranking (78.8M rows), deep learning diagnostic computer vision, and autonomous agent systems." />
-  <meta name="author" content="Fardin Hossain" />
+  <title>fardin.ai — FlyrankAI ML Internship & AI Systems Portfolio</title>
+  <meta name="description" content="Md. Fardin Hossain — AI/ML Systems Engineer & Software Engineer. FlyrankAI ML Internship, out-of-core DuckDB (78.8M rows), deep learning diagnostic CV, and full-stack intelligent systems." />
+  <meta name="author" content="Md. Fardin Hossain" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://flyrankai-ml-internship-task.vercel.app/" />
 
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://flyrankai-ml-internship-task.vercel.app/" />
-  <meta property="og:title" content="Fardin Hossain — AI & Machine Learning Systems Engineer" />
-  <meta property="og:description" content="Production ML rankers (78.8M rows), 98.72% deep learning computer vision classifiers, and autonomous agent architectures." />
-  <meta property="og:image" content="https://flyrankai-ml-internship-task.vercel.app/screenshot_empty_but_live.png" />
+  <meta property="og:title" content="Md. Fardin Hossain — FlyrankAI ML Internship & Systems" />
+  <meta property="og:description" content="FlyrankAI ML Internship: Out-of-core tabular ranking (78.8M rows), 98.7% diagnostic vision, and autonomous agent architectures." />
+  <meta property="og:image" content="https://flyrankai-ml-internship-task.vercel.app/fardin_profile.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fardin Hossain — AI/ML Engineer" />
-  <meta name="twitter:description" content="Out-of-core tabular ranking, deep learning CV, and autonomous research agents." />
-  <meta name="twitter:image" content="https://flyrankai-ml-internship-task.vercel.app/screenshot_empty_but_live.png" />
+  <meta name="twitter:title" content="fardin.ai — FlyrankAI ML Internship" />
+  <meta name="twitter:description" content="AI & Machine Learning Systems Engineer — Out-of-core ranking, PyTorch CV, and cybersecurity." />
+  <meta name="twitter:image" content="https://flyrankai-ml-internship-task.vercel.app/fardin_profile.jpg" />
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='100%' height='100%' rx='6' fill='%23000000'/><text x='50%' y='55%' fill='%23F59E0B' font-family='system-ui, sans-serif' font-weight='900' font-size='16' text-anchor='middle' dominant-baseline='middle'>FH</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     /* -------------------------------------------------------------
-       THE HIGH-END DESIGN SYSTEM (ANTI-SLOP DIRECTIVES)
-       - Ethereal Glass / Obsidian Dark Architecture
-       - Double-Bezel (Doppelrand) Nested Hardware Radii
-       - Button-in-Button Kinetic Interactions
-       - Zero Generic AI Templates (No clichéd purple mesh or bootstrap cards)
+       EVOLUTA DARK CYBERNETIC DESIGN SYSTEM
+       - Pure Obsidian Void (#000000)
+       - Amber Glowing Hairline Viewport Frame (#F59E0B)
+       - Monolithic Behind-the-Subject Typography ("- FlyrankAI - ML Internship")
+       - Centerpiece Robot Subject with Amber Accents
+       - Flanking Telemetry HUDs
+       - High-End Profile Details / Introduction Section with Fardin Portrait
+       - 16 Bento Project Cards + Live Interactive Search Triage Calculator
     -------------------------------------------------------------- */
     :root {
-      --bg-deep: #07080C;
-      --bg-surface: #0E1118;
-      --bg-card: rgba(16, 20, 30, 0.75);
+      --bg-void: #000000;
+      --bg-canvas: #030305;
+      --bg-card: rgba(10, 12, 18, 0.78);
+      --bg-card-hover: rgba(18, 22, 34, 0.88);
       --bg-bezel: rgba(255, 255, 255, 0.035);
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-active: rgba(56, 189, 248, 0.35);
       
-      --text-main: #F8FAFC;
-      --text-muted: #94A3B8;
-      --text-dim: #64748B;
+      --amber: #F59E0B;
+      --amber-glow: rgba(245, 158, 11, 0.4);
+      --amber-subtle: rgba(245, 158, 11, 0.12);
       
       --cyan: #38BDF8;
-      --cyan-glow: rgba(56, 189, 248, 0.15);
+      --cyan-glow: rgba(56, 189, 248, 0.25);
       --emerald: #10B981;
-      --emerald-glow: rgba(16, 185, 129, 0.15);
-      --purple: #A855F7;
-      --amber: #F59E0B;
+      --emerald-glow: rgba(16, 185, 129, 0.25);
       
-      --radius-outer: 24px;
-      --radius-inner: 18px;
-      --radius-pill: 9999px;
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --text-translucent: rgba(255, 255, 255, 0.26);
       
-      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --border-amber: rgba(245, 158, 11, 0.38);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-logo: 'Space Grotesk', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
       
       --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
-      --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     * {
@@ -73,9 +77,9 @@
 
     html {
       scroll-behavior: smooth;
-      background-color: var(--bg-deep);
+      background-color: var(--bg-void);
       color: var(--text-main);
-      font-family: var(--font-sans);
+      font-family: var(--font-display);
       -webkit-font-smoothing: antialiased;
     }
 
@@ -85,71 +89,117 @@
       flex-direction: column;
       position: relative;
       overflow-x: hidden;
-      line-height: 1.6;
+      background-color: var(--bg-void);
+      padding: 0.85rem;
     }
 
-    /* Atmospheric Ambient Background */
-    .ambient-canvas {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background: 
-        radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.04) 0%, transparent 45%),
-        radial-gradient(circle at 85% 35%, rgba(16, 185, 129, 0.035) 0%, transparent 40%),
-        radial-gradient(circle at 50% 80%, rgba(168, 85, 247, 0.03) 0%, transparent 50%);
-    }
-
-    /* Film grain texture */
-    .film-grain {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0.025;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    }
-
-    .wrapper {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
+    @media (min-width: 768px) {
+      body {
+        padding: 1.25rem;
+      }
     }
 
     /* -------------------------------------------------------------
-       1. FLOATING FLUID ISLAND NAVBAR
+       OUTER AMBER-GLOW BOUNDING FRAME (EVOLUTA SIGNATURE)
     -------------------------------------------------------------- */
-    .nav-container {
-      position: sticky;
-      top: 1.25rem;
-      z-index: 50;
+    .outer-frame {
+      position: relative;
+      background-color: var(--bg-canvas);
+      border: 1px solid var(--border-amber);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 
+        0 0 60px -15px rgba(245, 158, 11, 0.16),
+        inset 0 0 40px rgba(0, 0, 0, 0.85);
       display: flex;
-      justify-content: center;
-      margin-bottom: 3.5rem;
+      flex-direction: column;
+      min-height: calc(100vh - 2.5rem);
     }
 
-    .island-nav {
+    .frame-corner-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle at 0% 0%, rgba(245, 158, 11, 0.24) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Dynamic Animated Background */
+    #neural-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.55;
+    }
+
+    .ambient-aurora {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .aurora-sphere {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.15;
+      will-change: transform;
+    }
+
+    .sphere-amber {
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, #f59e0b 0%, rgba(245, 158, 11, 0) 70%);
+      animation: pulse-amber 16s infinite alternate ease-in-out;
+    }
+
+    .sphere-cyan {
+      top: 45%;
+      right: -10%;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, #0284c7 0%, rgba(56, 189, 248, 0) 70%);
+      animation: pulse-cyan 22s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulse-amber {
+      0% { transform: translate(-50%, -10%) scale(0.9); opacity: 0.14; }
+      100% { transform: translate(-50%, 15%) scale(1.15); opacity: 0.22; }
+    }
+
+    @keyframes pulse-cyan {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(-80px) scale(1.1); }
+    }
+
+    /* -------------------------------------------------------------
+       TOP NAVIGATION
+    -------------------------------------------------------------- */
+    .top-nav {
+      position: relative;
+      z-index: 20;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.5rem;
-      padding: 0.5rem 0.65rem 0.5rem 1.25rem;
-      background: rgba(12, 15, 22, 0.82);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-pill);
-      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.08);
-      max-width: 900px;
-      width: 100%;
-      transition: border-color 0.3s ease;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
 
-    .island-nav:hover {
-      border-color: rgba(255, 255, 255, 0.14);
+    @media (min-width: 768px) {
+      .top-nav {
+        padding: 1.75rem 3.5rem;
+      }
     }
 
     .nav-brand {
@@ -157,344 +207,372 @@
       align-items: center;
       gap: 0.75rem;
       text-decoration: none;
-      color: var(--text-main);
+      color: #FFF;
     }
 
-    .nav-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 1.5px solid var(--cyan);
-      object-fit: cover;
-    }
-
-    .nav-brand-title {
-      font-size: 0.925rem;
+    .nav-brand-logo {
+      font-family: var(--font-logo);
+      font-size: 1.5rem;
       font-weight: 700;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.04em;
+      color: #FFF;
+      text-transform: lowercase;
     }
 
-    .nav-brand-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--emerald);
-      background: var(--emerald-glow);
-      padding: 0.15rem 0.55rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(16, 185, 129, 0.25);
-    }
-
-    .nav-pulse-dot {
-      width: 6px;
-      height: 6px;
-      background: var(--emerald);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--emerald);
-      animation: pulse-glow 2s infinite;
-    }
-
-    @keyframes pulse-glow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
+    .nav-brand-dot {
+      color: var(--amber);
     }
 
     .nav-links {
-      display: flex;
+      display: none;
       align-items: center;
-      gap: 0.5rem;
+      gap: 2.25rem;
       list-style: none;
     }
 
+    @media (min-width: 860px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
     .nav-link {
-      color: var(--text-muted);
+      color: #94A3B8;
       text-decoration: none;
       font-size: 0.85rem;
       font-weight: 500;
-      padding: 0.4rem 0.85rem;
-      border-radius: var(--radius-pill);
-      transition: all 0.2s ease;
+      letter-spacing: -0.01em;
+      transition: color 0.2s ease;
     }
 
     .nav-link:hover {
-      color: var(--text-main);
-      background: rgba(255, 255, 255, 0.05);
+      color: #FFF;
     }
 
-    .nav-cta {
+    .nav-cta-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: var(--text-main);
-      color: #000;
-      text-decoration: none;
+      background: #FFFFFF;
+      color: #000000;
+      font-family: var(--font-display);
       font-size: 0.825rem;
       font-weight: 700;
-      padding: 0.45rem 0.5rem 0.45rem 1rem;
-      border-radius: var(--radius-pill);
-      transition: transform 0.2s var(--ease-spring), opacity 0.2s ease;
+      padding: 0.55rem 1.35rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: transform 0.2s var(--ease-spring), opacity 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
     }
 
-    .nav-cta:hover {
-      transform: scale(0.98);
-      opacity: 0.95;
-    }
-
-    .nav-cta-icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      transition: transform 0.2s ease;
-    }
-
-    .nav-cta:hover .nav-cta-icon {
-      transform: translate(2px, -2px);
+    .nav-cta-btn:hover {
+      transform: scale(0.97);
+      opacity: 0.94;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
     }
 
     /* -------------------------------------------------------------
-       2. HERO: ART DIRECTION & IDENTITY
+       HERO: MONOLITHIC DISPLAY + ROBOT CENTERPIECE
     -------------------------------------------------------------- */
-    .hero-section {
-      padding: 2.5rem 0 4.5rem;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-
-    .eyebrow-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--cyan);
-      background: var(--cyan-glow);
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      padding: 0.35rem 0.85rem;
-      border-radius: var(--radius-pill);
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .hero-title {
-      font-size: clamp(2.4rem, 4.5vw, 4rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.035em;
-      color: var(--text-main);
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-title span {
-      background: linear-gradient(135deg, #FFF 20%, #94A3B8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-title .highlight {
-      background: linear-gradient(135deg, var(--cyan) 0%, #A5F3FC 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-lead {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      max-width: 48ch;
-      margin-bottom: 2rem;
-    }
-
-    .hero-actions {
+    .hero-stage {
+      position: relative;
+      z-index: 10;
+      min-height: 84vh;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      margin-bottom: 2.5rem;
+      padding: 2rem 1.5rem 3rem;
+      overflow: hidden;
     }
 
-    /* Button-in-Button Architecture */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      background: var(--text-main);
-      color: #07080C;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 0.65rem 0.65rem 0.65rem 1.4rem;
-      border-radius: var(--radius-pill);
-      text-decoration: none;
-      transition: transform 0.2s var(--ease-spring), box-shadow 0.2s ease;
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(255, 255, 255, 0.22);
-    }
-
-    .btn-icon-bubble {
-      width: 32px;
-      height: 32px;
-      background: rgba(0, 0, 0, 0.08);
-      border-radius: 50%;
+    /* Giant Background Monolithic Text */
+    .hero-bg-text-layer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -52%);
+      width: 100%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
-      transition: transform 0.25s var(--ease-spring);
+      pointer-events: none;
+      z-index: 2;
+      user-select: none;
+      text-align: center;
     }
 
-    .btn-primary:hover .btn-icon-bubble {
-      transform: translate(2px, -2px) scale(1.05);
+    .bg-text-line-1 {
+      font-size: clamp(3rem, 9.5vw, 9.2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: #FFFFFF;
+      line-height: 0.9;
+      text-transform: lowercase;
+      white-space: nowrap;
+      text-shadow: 0 10px 50px rgba(0, 0, 0, 0.9);
     }
 
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-main);
-      border: 1px solid var(--border-subtle);
-      font-weight: 600;
-      font-size: 0.925rem;
-      padding: 0.75rem 1.35rem;
-      border-radius: var(--radius-pill);
-      text-decoration: none;
-      backdrop-filter: blur(10px);
-      transition: all 0.2s ease;
+    .bg-text-line-2 {
+      font-size: clamp(3rem, 9.5vw, 9.2rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text-translucent);
+      line-height: 0.95;
+      text-transform: lowercase;
+      white-space: nowrap;
+      margin-top: -0.5rem;
     }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.18);
-      transform: translateY(-2px);
-    }
-
-    /* Double-Bezel Hardware Card for Hero Stats */
-    .hero-hardware-card {
-      background: var(--bg-bezel);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-outer);
-      padding: 8px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    }
-
-    .hero-hardware-inner {
-      background: var(--bg-card);
-      backdrop-filter: blur(24px);
-      border-radius: var(--radius-inner);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 2rem;
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.08);
-    }
-
-    .hud-header {
+    /* Robot Centerpiece Overlapping Typography */
+    .hero-subject-wrapper {
+      position: relative;
+      z-index: 4;
       display: flex;
+      flex-direction: column;
       align-items: center;
+      margin-top: 2rem;
+    }
+
+    .hero-robot-frame {
+      position: relative;
+      width: clamp(310px, 35vw, 470px);
+      height: clamp(380px, 46vw, 580px);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      filter: drop-shadow(0 0 50px rgba(245, 158, 11, 0.32));
+      transition: transform 0.4s var(--ease-spring);
+    }
+
+    .hero-robot-frame:hover {
+      transform: scale(1.02);
+    }
+
+    .hero-robot-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      pointer-events: none;
+    }
+
+    /* Amber rim halo behind robot */
+    .hero-robot-halo {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.38) 0%, transparent 70%);
+      filter: blur(50px);
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* Flanking HUD Panels */
+    .hero-hud-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 6;
+      display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
+      padding: 1.5rem 2rem;
     }
 
-    .hud-title {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    @media (min-width: 768px) {
+      .hero-hud-layer {
+        padding: 2.5rem 3.5rem;
+      }
     }
 
-    .hud-metric-row {
+    .hud-bottom-row {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-start;
+      pointer-events: auto;
+    }
+
+    @media (min-width: 860px) {
+      .hud-bottom-row {
+        flex-direction: row;
+        align-items: flex-end;
+      }
+    }
+
+    /* Left HUD */
+    .hud-left {
+      max-width: 340px;
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
     }
 
-    .hud-metric-item {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      padding-bottom: 0.85rem;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+    .hud-manifesto {
+      font-size: 0.875rem;
+      color: #94A3B8;
+      line-height: 1.6;
     }
 
-    .hud-metric-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .hud-metric-val {
-      font-family: var(--font-mono);
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
-    .hud-metric-val.cyan { color: var(--cyan); }
-    .hud-metric-val.emerald { color: var(--emerald); }
-
-    /* -------------------------------------------------------------
-       3. METRICS TICKER TAPE
-    -------------------------------------------------------------- */
-    .ticker-bar {
-      margin: 2rem 0 4rem;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
-
-    .ticker-card {
-      background: var(--bg-bezel);
-      border: 1px solid var(--border-subtle);
-      border-radius: 16px;
-      padding: 1.25rem;
-      text-align: center;
-      transition: border-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .ticker-card:hover {
-      border-color: rgba(255, 255, 255, 0.16);
-      transform: translateY(-2px);
-    }
-
-    .ticker-number {
-      font-family: var(--font-mono);
-      font-size: 1.85rem;
-      font-weight: 800;
-      color: var(--text-main);
-      margin-bottom: 0.25rem;
-    }
-
-    .ticker-caption {
-      font-size: 0.775rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    .hud-manifesto strong {
+      color: #FFF;
       font-weight: 600;
     }
 
+    .hud-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .hud-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #E2E8F0;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.35rem 0.8rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .hud-pill:hover {
+      border-color: var(--amber);
+      color: var(--amber);
+      background: var(--amber-subtle);
+    }
+
+    /* Center HUD Action */
+    .hud-center {
+      align-self: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .hud-play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #FFF;
+      text-decoration: none;
+      background: rgba(10, 12, 18, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      backdrop-filter: blur(12px);
+      transition: all 0.2s ease;
+    }
+
+    .hud-play-btn:hover {
+      border-color: var(--amber);
+      background: rgba(245, 158, 11, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .play-arrow {
+      font-size: 0.75rem;
+      color: var(--amber);
+    }
+
+    /* Right HUD */
+    .hud-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 860px) {
+      .hud-right {
+        align-items: flex-end;
+      }
+    }
+
+    .hud-emblem {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .hud-metrics-row {
+      display: flex;
+      gap: 0.85rem;
+    }
+
+    .hud-metric-box {
+      background: rgba(10, 12, 18, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 0.85rem 1.25rem;
+      min-width: 110px;
+      backdrop-filter: blur(16px);
+      transition: border-color 0.2s ease;
+    }
+
+    .hud-metric-box:hover {
+      border-color: var(--border-amber);
+    }
+
+    .hud-metric-num {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #FFF;
+      line-height: 1.1;
+      margin-bottom: 0.25rem;
+    }
+
+    .hud-metric-label {
+      font-size: 0.7rem;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
     /* -------------------------------------------------------------
-       4. FEATURED ANCHOR: FLYRANK INDUSTRIAL ML BENCHMARK
+       MAIN CONTENT CONTAINER
     -------------------------------------------------------------- */
+    .content-area {
+      position: relative;
+      z-index: 10;
+      padding: 4rem 2rem 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .content-area {
+        padding: 5rem 3.5rem 6rem;
+      }
+    }
+
     .section-wrap {
-      margin-bottom: 5.5rem;
+      margin-bottom: 6rem;
     }
 
     .section-head {
-      margin-bottom: 2.25rem;
+      margin-bottom: 2.5rem;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
@@ -503,108 +581,302 @@
     .section-eyebrow {
       font-family: var(--font-mono);
       font-size: 0.8rem;
-      color: var(--cyan);
+      color: var(--amber);
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       font-weight: 600;
     }
 
     .section-title {
-      font-size: 2.2rem;
+      font-size: clamp(2rem, 4vw, 2.75rem);
       font-weight: 800;
-      letter-spacing: -0.025em;
+      letter-spacing: -0.03em;
+      color: #FFF;
+      line-height: 1.15;
     }
 
     .section-sub {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 60ch;
+      font-size: 1rem;
+      color: #94A3B8;
+      max-width: 780px;
+      line-height: 1.6;
     }
 
-    /* Flagship Double-Bezel Architecture */
+    /* -------------------------------------------------------------
+       PROFILE DETAILS & INTRODUCTION SECTION (WITH FARDIN'S PHOTO)
+    -------------------------------------------------------------- */
+    .profile-card-outer {
+      background: var(--bg-bezel);
+      border: 1px solid var(--border-amber);
+      border-radius: 28px;
+      padding: 8px;
+      box-shadow: 0 0 50px rgba(245, 158, 11, 0.08);
+      margin-bottom: 6rem;
+    }
+
+    .profile-card-inner {
+      background: rgba(10, 12, 18, 0.88);
+      backdrop-filter: blur(24px);
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 900px) {
+      .profile-card-inner {
+        grid-template-columns: 360px 1fr;
+        padding: 3.5rem;
+      }
+    }
+
+    /* Profile Left: Photo & Quick Badges */
+    .profile-left-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .profile-photo-wrap {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      border-radius: 32px;
+      padding: 6px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.6) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(56, 189, 248, 0.4) 100%);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.2);
+    }
+
+    .profile-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      border-radius: 26px;
+      background: #000;
+    }
+
+    .profile-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.775rem;
+      color: #10B981;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      padding: 0.45rem 1rem;
+      border-radius: 9999px;
+    }
+
+    .status-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 8px #10B981;
+      animation: status-ping 2s infinite;
+    }
+
+    @keyframes status-ping {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .profile-socials-row {
+      display: flex;
+      gap: 0.75rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .profile-social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94A3B8;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .profile-social-link:hover {
+      color: #FFF;
+      border-color: var(--amber);
+      background: var(--amber-subtle);
+      transform: translateY(-2px);
+    }
+
+    /* Profile Right: Narrative & Skills Radar */
+    .profile-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .profile-intro-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .profile-name-title {
+      font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+      font-weight: 800;
+      color: #FFF;
+      letter-spacing: -0.03em;
+    }
+
+    .profile-tagline {
+      font-size: 1.05rem;
+      color: var(--amber);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .profile-bio-text {
+      font-size: 0.975rem;
+      color: #CBD5E1;
+      line-height: 1.7;
+    }
+
+    .profile-bio-text p + p {
+      margin-top: 1rem;
+    }
+
+    .profile-skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .profile-skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .skill-card-box {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+
+    .skill-box-title {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-box-desc {
+      font-size: 0.825rem;
+      color: #94A3B8;
+      line-height: 1.5;
+    }
+
+    /* -------------------------------------------------------------
+       FLAGSHIP FLYRANK AI BENCHMARK SECTION
+    -------------------------------------------------------------- */
     .flagship-bezel {
       background: var(--bg-bezel);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      border-radius: var(--radius-outer);
-      padding: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .flagship-bezel::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: 20%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
-      pointer-events: none;
+      border: 1px solid var(--border-amber);
+      border-radius: 24px;
+      padding: 8px;
+      margin-bottom: 6rem;
     }
 
     .flagship-inner {
       background: var(--bg-card);
-      backdrop-filter: blur(24px);
-      border-radius: var(--radius-inner);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 2.5rem;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 2.5rem;
-      position: relative;
     }
 
-    .flagship-badge-group {
+    @media (min-width: 768px) {
+      .flagship-inner {
+        padding: 3.5rem;
+      }
+    }
+
+    .flagship-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .flagship-grid {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    .flagship-tag-list {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
 
-    .pill-tag {
+    .flagship-tag {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 600;
+      color: var(--amber);
+      background: var(--amber-subtle);
+      border: 1px solid rgba(245, 158, 11, 0.25);
       padding: 0.25rem 0.65rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-subtle);
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-muted);
+      border-radius: 6px;
     }
 
-    .pill-tag.accent {
-      color: var(--cyan);
-      border-color: rgba(56, 189, 248, 0.3);
-      background: var(--cyan-glow);
-    }
-
-    .flagship-heading {
+    .flagship-h3 {
       font-size: 1.85rem;
       font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
+      color: #FFF;
       margin-bottom: 1rem;
+      letter-spacing: -0.02em;
     }
 
-    .flagship-desc {
-      color: var(--text-muted);
-      font-size: 1rem;
+    .flagship-p {
+      color: #94A3B8;
       line-height: 1.65;
       margin-bottom: 1.75rem;
     }
 
     .flagship-specs {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 1.5rem;
       margin-bottom: 2rem;
     }
 
     .spec-item {
-      background: rgba(255, 255, 255, 0.025);
-      border: 1px solid var(--border-subtle);
-      padding: 1rem;
-      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .spec-val {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFF;
     }
 
     .spec-label {
@@ -612,144 +884,172 @@
       color: var(--text-dim);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
     }
 
-    .spec-value {
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .flagship-cta-cluster {
+    .flagship-cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.85rem;
-    }
-
-    .flagship-visual {
-      display: flex;
-      flex-direction: column;
       gap: 1rem;
     }
 
-    .terminal-box {
-      background: #050608;
-      border: 1px solid var(--border-subtle);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    .btn-solid {
+      background: #FFFFFF;
+      color: #000;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.2s var(--ease-spring);
     }
 
-    .terminal-topbar {
+    .btn-solid:hover {
+      transform: scale(0.97);
+      background: #F1F5F9;
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #FFF;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--amber);
+      color: var(--amber);
+    }
+
+    /* Terminal Telemetry Preview Card */
+    .telemetry-card {
+      background: #000000;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .telemetry-header {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.65rem 1rem;
-      background: rgba(255, 255, 255, 0.025);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .terminal-dots {
+    .telemetry-dots {
       display: flex;
-      gap: 6px;
+      gap: 0.4rem;
     }
 
-    .dot {
+    .telemetry-dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #334155;
     }
 
-    .terminal-code {
+    .telemetry-dot.red { background: #EF4444; }
+    .telemetry-dot.yellow { background: #F59E0B; }
+    .telemetry-dot.green { background: #10B981; }
+
+    .telemetry-title {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
-      padding: 1.25rem;
-      color: #E2E8F0;
-      line-height: 1.6;
-      white-space: pre-wrap;
+      font-size: 0.75rem;
+      color: var(--text-dim);
     }
 
-    .terminal-code .kw { color: #F472B6; font-weight: 600; }
-    .terminal-code .fn { color: #60A5FA; }
-    .terminal-code .str { color: #34D399; }
-    .terminal-code .num { color: #FBBF24; }
-    .terminal-code .com { color: #64748B; font-style: italic; }
+    .telemetry-body {
+      padding: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.825rem;
+      color: #A7F3D0;
+      line-height: 1.7;
+    }
+
+    .telemetry-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .telemetry-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .tele-label {
+      color: #94A3B8;
+    }
+
+    .tele-val {
+      color: #FFF;
+      font-weight: 600;
+    }
 
     /* -------------------------------------------------------------
-       5. ASYMMETRIC BENTO GRID: COMPLETE REPOSITORY SHOWCASE
+       BENTO PROJECTS GRID (ALL 16 REPOSITORIES)
     -------------------------------------------------------------- */
-    .filter-tabs {
+    .filter-bar {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 2.25rem;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
     }
 
-    .tab-btn {
-      background: none;
-      border: 1px solid transparent;
-      color: var(--text-muted);
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
-      font-weight: 600;
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94A3B8;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
       padding: 0.45rem 1rem;
-      border-radius: var(--radius-pill);
+      border-radius: 9999px;
       cursor: pointer;
       transition: all 0.2s ease;
     }
 
-    .tab-btn:hover {
-      color: var(--text-main);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .tab-btn.active {
-      color: var(--text-main);
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.15);
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--amber-subtle);
+      border-color: var(--amber);
+      color: var(--amber);
     }
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 1.5rem;
+      margin-bottom: 6rem;
     }
 
     .project-card-outer {
       background: var(--bg-bezel);
       border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-outer);
+      border-radius: 20px;
       padding: 6px;
-      transition: transform 0.25s var(--ease-spring), border-color 0.25s ease;
-      display: flex;
-      flex-direction: column;
+      transition: all 0.25s var(--ease-spring);
     }
 
     .project-card-outer:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .project-card-outer.span-2 {
-      grid-column: span 2;
+      border-color: var(--border-amber);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px -10px rgba(245, 158, 11, 0.15);
     }
 
     .project-card-inner {
       background: var(--bg-card);
       backdrop-filter: blur(16px);
-      border-radius: var(--radius-inner);
+      border-radius: 15px;
       border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 1.75rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
-      box-shadow: inset 0 1px 1px rgba(255,255,255,0.06);
     }
 
     .card-top {
@@ -770,23 +1070,23 @@
       font-family: var(--font-mono);
       font-size: 0.75rem;
       color: var(--amber);
-      background: rgba(245, 158, 11, 0.1);
+      background: var(--amber-subtle);
       padding: 0.15rem 0.5rem;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 9999px;
+      border: 1px solid rgba(245, 158, 11, 0.25);
     }
 
     .card-title {
       font-size: 1.25rem;
       font-weight: 700;
-      color: var(--text-main);
+      color: #FFF;
       margin-bottom: 0.65rem;
       line-height: 1.3;
     }
 
     .card-desc {
       font-size: 0.9rem;
-      color: var(--text-muted);
+      color: #94A3B8;
       line-height: 1.55;
       margin-bottom: 1.25rem;
     }
@@ -799,7 +1099,7 @@
       font-size: 0.8rem;
       font-weight: 600;
       color: var(--emerald);
-      background: var(--emerald-glow);
+      background: rgba(16, 185, 129, 0.12);
       border: 1px solid rgba(16, 185, 129, 0.25);
       padding: 0.3rem 0.65rem;
       border-radius: 8px;
@@ -839,32 +1139,32 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--text-main);
+      color: #FFF;
       text-decoration: none;
       transition: all 0.2s var(--ease-spring);
     }
 
     .project-card-outer:hover .card-link-icon {
-      background: var(--text-main);
+      background: #FFFFFF;
       color: #000;
       transform: translate(2px, -2px);
     }
 
     /* -------------------------------------------------------------
-       6. INTERACTIVE FEATURE: COLD-START RANKING TRIAGE SIMULATOR
+       INTERACTIVE SEARCH TRIAGE CALCULATOR
     -------------------------------------------------------------- */
     .calculator-bezel {
       background: var(--bg-bezel);
       border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-outer);
+      border-radius: 24px;
       padding: 8px;
-      margin-bottom: 5.5rem;
+      margin-bottom: 6rem;
     }
 
     .calculator-inner {
       background: var(--bg-card);
       backdrop-filter: blur(20px);
-      border-radius: var(--radius-inner);
+      border-radius: 18px;
       border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 2.5rem;
     }
@@ -874,6 +1174,12 @@
       grid-template-columns: 1fr 1fr;
       gap: 2.5rem;
       align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .calc-controls {
@@ -892,13 +1198,13 @@
       display: flex;
       justify-content: space-between;
       font-size: 0.85rem;
-      color: var(--text-muted);
+      color: #94A3B8;
     }
 
     .control-val {
       font-family: var(--font-mono);
       font-weight: 700;
-      color: var(--cyan);
+      color: var(--amber);
     }
 
     input[type=range] {
@@ -915,14 +1221,14 @@
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: var(--cyan);
+      background: var(--amber);
       cursor: pointer;
-      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
     }
 
     .calc-display {
-      background: #05070B;
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: #000000;
+      border: 1px solid rgba(245, 158, 11, 0.25);
       border-radius: 16px;
       padding: 2rem;
       display: flex;
@@ -952,18 +1258,18 @@
       font-family: var(--font-mono);
       font-size: 1.35rem;
       font-weight: 700;
-      color: var(--text-main);
+      color: #FFF;
     }
 
+    .display-num.amber { color: var(--amber); }
     .display-num.emerald { color: var(--emerald); }
-    .display-num.cyan { color: var(--cyan); }
 
     /* -------------------------------------------------------------
-       7. VERIFIED CREDENTIALS & FOOTER
+       CREDENTIALS & FOOTER
     -------------------------------------------------------------- */
     footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 4rem 0 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 4rem 2rem 3rem;
       margin-top: auto;
     }
 
@@ -974,38 +1280,10 @@
       margin-bottom: 3rem;
     }
 
-    .footer-bio p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-top: 0.75rem;
-    }
-
-    .footer-col-title {
-      font-family: var(--font-mono);
-      font-size: 0.775rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-dim);
-      margin-bottom: 1rem;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-    }
-
-    .footer-link {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.875rem;
-      transition: color 0.2s ease;
-    }
-
-    .footer-link:hover {
-      color: var(--cyan);
+    @media (max-width: 860px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .badge-card {
@@ -1013,11 +1291,11 @@
       align-items: center;
       gap: 0.85rem;
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      border: 1px solid rgba(16, 185, 129, 0.35);
       padding: 0.75rem 1.25rem;
-      border-radius: var(--radius-inner);
+      border-radius: 16px;
       text-decoration: none;
-      color: var(--text-main);
+      color: #FFF;
       transition: all 0.2s ease;
     }
 
@@ -1025,27 +1303,6 @@
       border-color: var(--emerald);
       transform: translateY(-2px);
       box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
-    }
-
-    .badge-icon {
-      font-size: 1.5rem;
-    }
-
-    .badge-meta {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .badge-label {
-      font-size: 0.7rem;
-      font-family: var(--font-mono);
-      color: var(--emerald);
-      text-transform: uppercase;
-    }
-
-    .badge-name {
-      font-size: 0.875rem;
-      font-weight: 700;
     }
 
     .footer-bottom {
@@ -1058,753 +1315,868 @@
       color: var(--text-dim);
       font-family: var(--font-mono);
     }
-
-    /* -------------------------------------------------------------
-       8. RESPONSIVE MEDIA QUERIES (MOBILE FIRST HARMONY)
-    -------------------------------------------------------------- */
-    @media (max-width: 960px) {
-      .hero-section {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .flagship-inner {
-        grid-template-columns: 1fr;
-      }
-      .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .project-card-outer.span-2 {
-        grid-column: span 1;
-      }
-      .ticker-bar {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .calc-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      .nav-links {
-        display: none;
-      }
-      .ticker-bar {
-        grid-template-columns: 1fr;
-      }
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      .flagship-specs {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Ambient Decorative Background -->
-  <div class="ambient-canvas"></div>
-  <div class="film-grain"></div>
-
-  <div class="wrapper">
-
-    <!-- 1. FLOATING FLUID ISLAND NAVBAR -->
-    <div class="nav-container">
-      <nav class="island-nav">
-        <a href="#overview" class="nav-brand">
-          <img src="s.png" alt="Fardin Hossain" class="nav-avatar" />
-          <span class="nav-brand-title">Fardin Hossain</span>
-          <span class="nav-brand-status">
-            <span class="nav-pulse-dot"></span>
-            ML Engineer
-          </span>
-        </a>
-
-        <ul class="nav-links">
-          <li><a href="#flyrank-ml" class="nav-link">FlyRank Benchmark</a></li>
-          <li><a href="#projects" class="nav-link">All Projects</a></li>
-          <li><a href="#interactive-triage" class="nav-link">Interactive Triage</a></li>
-          <li><a href="#credentials" class="nav-link">Credentials</a></li>
-        </ul>
-
-        <a href="mailto:iamfardin.swe@gmail.com" class="nav-cta">
-          <span>Get in Touch</span>
-          <span class="nav-cta-icon">↗</span>
-        </a>
-      </nav>
+  <!-- MAIN EVOLUTA-STYLE AMBER-GLOW FRAME -->
+  <div class="outer-frame">
+    <div class="frame-corner-glow"></div>
+    <div class="ambient-aurora">
+      <div class="aurora-sphere sphere-amber"></div>
+      <div class="aurora-sphere sphere-cyan"></div>
     </div>
+    <canvas id="neural-canvas"></canvas>
 
-    <!-- 2. HERO: ART DIRECTION & IDENTITY -->
-    <section class="hero-section" id="overview">
-      <div class="hero-content">
-        <div class="eyebrow-pill">
-          <span>●</span>
-          <span>Open to AI / ML Engineering Roles • Dhaka & Remote</span>
-        </div>
+    <!-- 1. TOP NAVIGATION -->
+    <header class="top-nav">
+      <a href="#home" class="nav-brand">
+        <span class="nav-brand-logo">fardin<span class="nav-brand-dot">.</span>ai</span>
+      </a>
 
-        <h1 class="hero-title">
-          <span>Engineering</span> <br/>
-          <span class="highlight">Leak-Free ML Systems</span> <br/>
-          <span>& Vision Classifiers.</span>
-        </h1>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#flyrank-ml" class="nav-link">FlyRank AI</a></li>
+        <li><a href="#projects" class="nav-link">All Projects</a></li>
+        <li><a href="#interactive-triage" class="nav-link">Simulator</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+      </ul>
 
-        <p class="hero-lead">
-          I build scalable machine learning pipelines, out-of-core tabular ranking engines across <strong>78.8M+ rows</strong>, 
-          deep transfer learning computer vision models (<strong>98.72% accuracy</strong>), and autonomous research agents.
-        </p>
+      <a href="mailto:fardin.hosn@gmail.com" class="nav-cta-btn">
+        <span>Get in touch</span>
+        <span>↗</span>
+      </a>
+    </header>
 
-        <div class="hero-actions">
-          <a href="#flyrank-ml" class="btn-primary">
-            <span>Explore FlyRank ML Benchmark</span>
-            <span class="btn-icon-bubble">↓</span>
-          </a>
-          <a href="https://github.com/fardinhossain" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-            <span>GitHub Profile (16 Repos)</span>
-            <span>↗</span>
-          </a>
-        </div>
+    <!-- 2. HERO: BEHIND-THE-SUBJECT MONOLITHIC DISPLAY (FLYRANKAI ML INTERNSHIP + BLACK ROBOT) -->
+    <section class="hero-stage" id="home">
+      
+      <!-- Behind-the-Subject Monolithic Typography requested by User -->
+      <div class="hero-bg-text-layer">
+        <div class="bg-text-line-1">- flyrank.ai -</div>
+        <div class="bg-text-line-2">ml internship</div>
       </div>
 
-      <!-- Hero Hardware Stats Card -->
-      <div class="hero-hardware-card">
-        <div class="hero-hardware-inner">
-          <div class="hud-header">
-            <span class="hud-title">Core Systems Telemetry</span>
-            <span class="pill-tag accent">Production Active</span>
-          </div>
-
-          <div class="hud-metric-row">
-            <div class="hud-metric-item">
-              <span class="hud-metric-label">Out-of-Core Scale</span>
-              <span class="hud-metric-val cyan">78,822,109 rows</span>
-            </div>
-            <div class="hud-metric-item">
-              <span class="hud-metric-label">DuckDB Query Latency</span>
-              <span class="hud-metric-val">4.18 seconds</span>
-            </div>
-            <div class="hud-metric-item">
-              <span class="hud-metric-label">Skin CV Diagnostic Acc</span>
-              <span class="hud-metric-val emerald">98.72%</span>
-            </div>
-            <div class="hud-metric-item">
-              <span class="hud-metric-label">Cross-Validation Leakage</span>
-              <span class="hud-metric-val emerald">0.00% (GroupKFold)</span>
-            </div>
-          </div>
+      <!-- Subject Centerpiece: Black Robot Overlapping Typography -->
+      <div class="hero-subject-wrapper">
+        <div class="hero-robot-halo"></div>
+        <div class="hero-robot-frame">
+          <img src="robot_clean.png" alt="FlyRank AI Autonomous System" class="hero-robot-img" />
         </div>
       </div>
-    </section>
 
-    <!-- 3. METRICS TICKER TAPE -->
-    <div class="ticker-bar">
-      <div class="ticker-card">
-        <div class="ticker-number">78.8M+</div>
-        <div class="ticker-caption">Search Telemetry Processed</div>
-      </div>
-      <div class="ticker-card">
-        <div class="ticker-number">98.72%</div>
-        <div class="ticker-caption">Transfer Learning Test Accuracy</div>
-      </div>
-      <div class="ticker-card">
-        <div class="ticker-number">16+</div>
-        <div class="ticker-caption">Open Source Engineering Repos</div>
-      </div>
-      <div class="ticker-card">
-        <div class="ticker-number">&lt; 50ms</div>
-        <div class="ticker-caption">Crisis Triage API Dispatch Latency</div>
-      </div>
-    </div>
+      <!-- Flanking Left/Right HUD Overlays -->
+      <div class="hero-hud-layer">
+        <div></div> <!-- Spacer -->
 
-    <!-- 4. FEATURED FLAGSHIP: FLYRANK INDUSTRIAL ML BENCHMARK -->
-    <section class="section-wrap" id="flyrank-ml">
-      <div class="section-head">
-        <span class="section-eyebrow">Primary Benchmark Anchor</span>
-        <h2 class="section-title">FlyRank AI — Industrial ML Ranking System</h2>
-        <p class="section-sub">
-          A production-scale machine learning benchmark built on 78.8 million rows of Search Console search query logs, 
-          featuring out-of-core DuckDB streaming, calibrated LightGBM rankers, and domain-stratified GroupKFold cross-validation.
-        </p>
-      </div>
-
-      <div class="flagship-bezel">
-        <div class="flagship-inner">
-          <div class="flagship-content">
-            <div class="flagship-badge-group">
-              <span class="pill-tag accent">Machine Learning Systems</span>
-              <span class="pill-tag">DuckDB</span>
-              <span class="pill-tag">LightGBM</span>
-              <span class="pill-tag">Pareto Frontier</span>
-              <span class="pill-tag">Research Paper</span>
-            </div>
-
-            <h3 class="flagship-heading">
-              Empirical Benchmark of Scalable Machine Learning Pipelines for Out-of-Core Industrial Analytics
-            </h3>
-
-            <p class="flagship-desc">
-              When business teams enter cold-start search domains, naive pandas dataframes crash on out-of-memory errors, 
-              and random k-fold splits leak domain signals into test sets. This system solves both: streaming Parquet batches 
-              via DuckDB in 4.18s, balancing sparse conversion targets (0.007%), and establishing Pareto-optimal trade-offs 
-              between high-value acquisition and compute cost.
+        <div class="hud-bottom-row">
+          <!-- Left HUD: Manifesto & Stack Pills -->
+          <div class="hud-left">
+            <p class="hud-manifesto">
+              <strong>FlyRank AI Machine Learning Internship</strong> — Scaled out-of-core search query ranking over 78.8M rows & diagnostic vision pipelines.
             </p>
-
-            <div class="flagship-specs">
-              <div class="spec-item">
-                <div class="spec-label">Partitioning Protocol</div>
-                <div class="spec-value">5-Fold GroupKFold (Domain-Held-Out)</div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-label">Model Pipeline</div>
-                <div class="spec-value">LightGBM scale_pos_weight Tuning</div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-label">RAM Footprint</div>
-                <div class="spec-value">&lt; 2.5 GB (Zero-OOM Out-of-Core)</div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-label">Telemetry Scope</div>
-                <div class="spec-value">Impressions, Clicks, Positions, Queries</div>
-              </div>
-            </div>
-
-            <div class="flagship-cta-cluster">
-              <a href="https://github.com/fardinhossain/FlyRankAI-ML-Internship-Task" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                <span>View ML Benchmark Repo</span>
-                <span class="btn-icon-bubble">↗</span>
-              </a>
-              <a href="https://github.com/fardinhossain/FlyRankAI-Internship-Portfolio-Fardin" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                <span>View Portfolio & Track Repo</span>
-                <span>↗</span>
-              </a>
+            <div class="hud-pills">
+              <a href="#flyrank-ml" class="hud-pill">78.8M DuckDB</a>
+              <a href="#projects" class="hud-pill">PyTorch CV</a>
+              <a href="#projects" class="hud-pill">Autonomous Agents</a>
             </div>
           </div>
 
-          <div class="flagship-visual">
-            <div class="terminal-box">
-              <div class="terminal-topbar">
-                <div class="terminal-dots">
-                  <div class="dot"></div>
-                  <div class="dot"></div>
-                  <div class="dot"></div>
-                </div>
-                <span style="font-family: var(--font-mono); font-size: 0.7rem; color: #64748B;">duckdb_stream.py</span>
-              </div>
-              <div class="terminal-code"><span class="com"># Out-of-Core DuckDB Streaming Pipeline</span>
-<span class="kw">import</span> duckdb, lightgbm <span class="kw">as</span> lgb
-
-conn = duckdb.connect()
-df = conn.execute(<span class="str">'''
-  SELECT domain_id, query_hash,
-         SUM(impressions) AS total_imp,
-         SUM(clicks) AS total_clk,
-         AVG(position) AS mean_pos
-  FROM read_parquet('telemetry/*.parquet')
-  GROUP BY domain_id, query_hash
-'''</span>).fetch_arrow_table()
-
-<span class="com"># Benchmark: 78,822,109 rows scanned in 4.18s</span>
-<span class="com"># Leakage audit: 0 query collisions in validation fold</span></div>
-            </div>
-
-            <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.25rem;">
-              <span style="font-size: 0.75rem; color: var(--text-dim); font-family: var(--font-mono); text-transform: uppercase;">Published Research & Code</span>
-              <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.35rem;">
-                Companion LaTeX paper formatted to IEEE/ACM specifications with empirical figures and Pareto decision curves.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. COMPLETE REPOSITORY SHOWCASE (FILTERABLE BENTO GRID) -->
-    <section class="section-wrap" id="projects">
-      <div class="section-head">
-        <span class="section-eyebrow">Curated Engineering Portfolio</span>
-        <h2 class="section-title">Open-Source AI, ML & Systems Projects</h2>
-        <p class="section-sub">
-          All repositories actively built and maintained on GitHub, spanning computer vision classifiers, 
-          real-time emergency triage APIs, systems simulators, and modern interactive graphics.
-        </p>
-      </div>
-
-      <!-- Filter Buttons -->
-      <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterProjects('all', this)">All Projects (11)</button>
-        <button class="tab-btn" onclick="filterProjects('ml', this)">Machine Learning & Data</button>
-        <button class="tab-btn" onclick="filterProjects('cv', this)">Computer Vision & AI</button>
-        <button class="tab-btn" onclick="filterProjects('api', this)">APIs & Autonomous Agents</button>
-        <button class="tab-btn" onclick="filterProjects('systems', this)">Systems & Simulators</button>
-      </div>
-
-      <!-- Bento Grid -->
-      <div class="projects-grid" id="projectGrid">
-
-        <!-- 1. Skin Disease Classification -->
-        <div class="project-card-outer span-2" data-category="cv">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag accent">Computer Vision / Deep Learning</span>
-                <span class="card-stars">★ 2</span>
-              </div>
-              <h3 class="card-title">Skin Disease Classification using Transfer Learning</h3>
-              <p class="card-desc">
-                High-precision dermatological diagnostic vision pipeline trained on 8 infectious skin conditions. 
-                Utilizes fine-tuned GoogLeNet and MobileNetV2 with transfer learning, custom image augmentations, 
-                and class-imbalance focal loss weighting.
-              </p>
-              <div class="card-metric-badge">
-                <span>🎯</span>
-                <span>98.72% Test Accuracy • 8 Infectious Conditions</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">Python</span>
-                <span class="tag-sm">PyTorch</span>
-                <span class="tag-sm">GoogLeNet</span>
-                <span class="tag-sm">MobileNetV2</span>
-                <span class="tag-sm">Transfer Learning</span>
-              </div>
-              <a href="https://github.com/fardinhossain/Skin-Disease-Classification-using-Transfer-Learning" target="_blank" rel="noopener noreferrer" class="card-link-icon" title="View GitHub Repo">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. CrisisDeskAI -->
-        <div class="project-card-outer" data-category="api">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag">Emergency AI API</span>
-                <span class="card-stars">★ GitHub</span>
-              </div>
-              <h3 class="card-title">CrisisDeskAI — Emergency Triage API</h3>
-              <p class="card-desc">
-                Intelligent backend engine for automated crisis and municipal service request classification, 
-                routing, and priority dispatch.
-              </p>
-              <div class="card-metric-badge">
-                <span>⚡</span>
-                <span>Sub-50ms Routing • Automated Severity SLA</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">TypeScript</span>
-                <span class="tag-sm">Node.js</span>
-                <span class="tag-sm">NLP Triage</span>
-              </div>
-              <a href="https://github.com/fardinhossain/CrisisDeskAI" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Autonomous arXiv Research Scouting Agent -->
-        <div class="project-card-outer" data-category="api">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag accent">Autonomous LLM Agent</span>
-                <span class="card-stars">★ Production</span>
-              </div>
-              <h3 class="card-title">Autonomous Literature Scouting Agent (CLI)</h3>
-              <p class="card-desc">
-                Unattended agent scanning arXiv API for query-focused papers, extracting benchmarks, 
-                evaluating dataset integrity, and writing structured Markdown synthesis cards.
-              </p>
-              <div class="card-metric-badge">
-                <span>🤖</span>
-                <span>100% Unattended • MCP Tooling Ready</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">Python</span>
-                <span class="tag-sm">arXiv API</span>
-                <span class="tag-sm">LLM Prompting</span>
-              </div>
-              <a href="https://github.com/fardinhossain/FlyRankAI-Internship-Portfolio-Fardin" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. SchedOS -->
-        <div class="project-card-outer span-2" data-category="systems">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag">Operating Systems Simulator</span>
-                <span class="card-stars">★ GitHub</span>
-              </div>
-              <h3 class="card-title">SchedOS — Interactive CPU Scheduling Simulator</h3>
-              <p class="card-desc">
-                Interactive web-based CPU scheduling algorithm simulator. Visually compares FCFS, SJF (Preemptive/Non-preemptive), 
-                Round Robin, and Priority Scheduling with live Gantt charts, turnaround time, and context-switch overhead analysis.
-              </p>
-              <div class="card-metric-badge">
-                <span>⏱️</span>
-                <span>Gantt Chart Visualization • Metric Comparison</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">TypeScript</span>
-                <span class="tag-sm">React</span>
-                <span class="tag-sm">Systems Architecture</span>
-              </div>
-              <a href="https://github.com/fardinhossain/SchedOS" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Civic-Pulse AI -->
-        <div class="project-card-outer" data-category="api">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag">Hackathon 2026</span>
-                <span class="card-stars">★ Hackathon</span>
-              </div>
-              <h3 class="card-title">Civic-Pulse AI Infrastructure Engine</h3>
-              <p class="card-desc">
-                AI platform for civic anomaly reporting, automated road hazard clustering, and municipal resolution tracking.
-              </p>
-              <div class="card-metric-badge">
-                <span>🏛️</span>
-                <span>Geospatial AI • Anomaly Detection</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">TypeScript</span>
-                <span class="tag-sm">Vision APIs</span>
-                <span class="tag-sm">Maps</span>
-              </div>
-              <a href="https://github.com/fardinhossain/Civic-Pulse_AI_API_Hackathon_2026" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. 3D Robotics & Classroom Simulation -->
-        <div class="project-card-outer" data-category="cv">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag">Modern OpenGL / C++</span>
-                <span class="card-stars">★ Systems</span>
-              </div>
-              <h3 class="card-title">3D Classroom & Robotics Simulation</h3>
-              <p class="card-desc">
-                Interactive real-time 3D environment featuring procedural geometry, Phong illumination, animated spotlight projections, 
-                and multi-axis robotic arm kinematics.
-              </p>
-              <div class="card-metric-badge">
-                <span>🎮</span>
-                <span>60 FPS • Custom GLSL Shaders</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">C++</span>
-                <span class="tag-sm">OpenGL</span>
-                <span class="tag-sm">GLSL</span>
-                <span class="tag-sm">Graphics Pipeline</span>
-              </div>
-              <a href="https://github.com/fardinhossain/Computer-Graphics-3D-Robotics-Classroom" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. LocationKhuji -->
-        <div class="project-card-outer" data-category="systems">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag">MERN Stack Platform</span>
-                <span class="card-stars">★ 4</span>
-              </div>
-              <h3 class="card-title">LocationKhuji — Geospatial Discovery</h3>
-              <p class="card-desc">
-                Radius-based emergency and housing discovery engine (1–20km). Real-time map filtering for hospitals, pharmacies, 
-                and flats with role-based auth and reviews.
-              </p>
-              <div class="card-metric-badge">
-                <span>📍</span>
-                <span>1-20km Radius Spatial Indexing</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">React</span>
-                <span class="tag-sm">Node.js</span>
-                <span class="tag-sm">MongoDB</span>
-                <span class="tag-sm">Leaflet</span>
-              </div>
-              <a href="https://github.com/fardinhossain/Locationkhuji" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. GainTheBrain -->
-        <div class="project-card-outer" data-category="systems">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag">Web Platform</span>
-                <span class="card-stars">★ GitHub</span>
-              </div>
-              <h3 class="card-title">GainTheBrain — Cognitive Training</h3>
-              <p class="card-desc">
-                Interactive web application for brain conditioning, cognitive agility assessment, and adaptive training routines.
-              </p>
-              <div class="card-metric-badge">
-                <span>🧠</span>
-                <span>Adaptive Analytics Engine</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">TypeScript</span>
-                <span class="tag-sm">Next.js</span>
-                <span class="tag-sm">Tailwind</span>
-              </div>
-              <a href="https://github.com/fardinhossain/GainTheBrain" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 9. SEU Routine Maker -->
-        <div class="project-card-outer" data-category="systems">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag">Utility Tool</span>
-                <span class="card-stars">★ 1</span>
-              </div>
-              <h3 class="card-title">SEU-Routine Maker</h3>
-              <p class="card-desc">
-                Automated university course timetable scheduler. Parses HTML course syllabi, detects duplicate time slots and conflicts, 
-                and exports schedules to PDF/PNG.
-              </p>
-              <div class="card-metric-badge">
-                <span>📅</span>
-                <span>Zero-Collision Matrix</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">JavaScript</span>
-                <span class="tag-sm">HTML5 Canvas</span>
-                <span class="tag-sm">PDFKit</span>
-              </div>
-              <a href="https://github.com/fardinhossain/SEU-Routine_Maker" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10. Unibuddy App -->
-        <div class="project-card-outer" data-category="systems">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag">Cross-Platform Mobile</span>
-                <span class="card-stars">★ 3</span>
-              </div>
-              <h3 class="card-title">Unibuddy University Companion</h3>
-              <p class="card-desc">
-                Full-featured student campus utility built with Flutter and Appwrite Cloud, handling student schedules, event broadcasts, 
-                and peer collaboration.
-              </p>
-              <div class="card-metric-badge">
-                <span>📱</span>
-                <span>Flutter + Appwrite Cloud</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">Flutter</span>
-                <span class="tag-sm">Dart</span>
-                <span class="tag-sm">Appwrite</span>
-              </div>
-              <a href="https://github.com/fardinhossain/Unibuddy_app" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 11. FlyRank AI General Fluency Track -->
-        <div class="project-card-outer" data-category="ml">
-          <div class="project-card-inner">
-            <div class="card-top">
-              <div class="card-category-row">
-                <span class="pill-tag accent">Courseware & Deliverables</span>
-                <span class="card-stars">★ Verified</span>
-              </div>
-              <h3 class="card-title">FlyRank AI Track Portfolio Repo</h3>
-              <p class="card-desc">
-                Complete archive of 27 Word reports and Markdown technical briefs covering the prompt ladder, MCP integrations, 
-                and continuous building plans.
-              </p>
-              <div class="card-metric-badge">
-                <span>📚</span>
-                <span>27 Track Deliverables • Capstone Impact</span>
-              </div>
-            </div>
-            <div class="card-bottom">
-              <div class="card-tags">
-                <span class="tag-sm">Technical Writing</span>
-                <span class="tag-sm">Prompt Engineering</span>
-                <span class="tag-sm">MCP</span>
-              </div>
-              <a href="https://github.com/fardinhossain/FlyRankAI-Internship-Portfolio-Fardin" target="_blank" rel="noopener noreferrer" class="card-link-icon">↗</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 6. INTERACTIVE FEATURE: COLD-START RANKING TRIAGE SIMULATOR -->
-    <section class="calculator-bezel" id="interactive-triage">
-      <div class="calculator-inner">
-        <div class="section-head" style="margin-bottom: 2rem;">
-          <span class="section-eyebrow">Interactive Systems Feature</span>
-          <h2 class="section-title">Cold-Start Search Triage Simulator</h2>
-          <p class="section-sub">
-            Test the math behind the FlyRank out-of-core pipeline: adjust query volume and class imbalance to see 
-            the expected high-value conversion capture and compute cost avoided.
-          </p>
-        </div>
-
-        <div class="calc-grid">
-          <div class="calc-controls">
-            <div class="control-group">
-              <div class="control-label-row">
-                <span>Search Query Volume (Monthly Telemetry)</span>
-                <span class="control-val" id="queryVal">5,000,000</span>
-              </div>
-              <input type="range" id="querySlider" min="500000" max="20000000" step="500000" value="5000000" oninput="runTriageSim()" />
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span>Target Class Imbalance (Positive Conversion Rate)</span>
-                <span class="control-val" id="imbalanceVal">0.05%</span>
-              </div>
-              <input type="range" id="imbalanceSlider" min="0.01" max="0.5" step="0.01" value="0.05" oninput="runTriageSim()" />
-            </div>
-
-            <div class="control-group">
-              <div class="control-label-row">
-                <span>Model Target Precision (Cutoff Threshold)</span>
-                <span class="control-val" id="thresholdVal">0.85</span>
-              </div>
-              <input type="range" id="thresholdSlider" min="0.50" max="0.99" step="0.01" value="0.85" oninput="runTriageSim()" />
-            </div>
-          </div>
-
-          <div class="calc-display">
-            <div class="display-row">
-              <span class="display-label">Expected High-Value Target Queries</span>
-              <span class="display-num cyan" id="targetQueries">2,500</span>
-            </div>
-            <div class="display-row">
-              <span class="display-label">Captured High-Value Opportunities</span>
-              <span class="display-num emerald" id="capturedQueries">2,125</span>
-            </div>
-            <div class="display-row">
-              <span class="display-label">Estimated Memory Footprint (DuckDB Stream)</span>
-              <span class="display-num" id="memoryFootprint">1.45 GB</span>
-            </div>
-            <div class="display-row">
-              <span class="display-label">Partitioning Recommendation</span>
-              <span class="display-num" style="font-size: 0.95rem; color: #94A3B8;" id="partitionAdvice">Domain GroupKFold (Leak-Free)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. VERIFIED CREDENTIALS & FOOTER -->
-    <footer id="credentials">
-      <div class="footer-grid">
-        <div class="footer-bio">
-          <div class="nav-brand" style="margin-bottom: 0.75rem;">
-            <img src="s.png" alt="Fardin Hossain" class="nav-avatar" />
-            <span class="nav-brand-title">Fardin Hossain</span>
-          </div>
-          <p>
-            Computer Science & Engineering graduate specializing in Machine Learning Systems, Out-of-Core Data Pipelines, 
-            and Diagnostic Computer Vision. Committed to leak-free evaluation and empirical rigor.
-          </p>
-          <div style="margin-top: 1.5rem;">
-            <a href="https://internship-badge.netlify.app/" target="_blank" rel="noopener noreferrer" class="badge-card">
-              <span class="badge-icon">🏅</span>
-              <div class="badge-meta">
-                <span class="badge-label">Credential Verification</span>
-                <span class="badge-name">FlyRank AI Graduate Intern</span>
-              </div>
+          <!-- Center Scroll Action -->
+          <div class="hud-center">
+            <a href="#about" class="hud-play-btn" title="Explore Systems & Profile">
+              <span>Explore</span>
+              <span class="play-arrow">▶</span>
             </a>
           </div>
-        </div>
 
-        <div>
-          <h4 class="footer-col-title">Primary Focus</h4>
-          <ul class="footer-links">
-            <li><a href="#flyrank-ml" class="footer-link">78.8M Out-of-Core ML Benchmark</a></li>
-            <li><a href="#projects" class="footer-link">98.72% Skin Disease Classifier</a></li>
-            <li><a href="#projects" class="footer-link">CrisisDeskAI Emergency Triage</a></li>
-            <li><a href="#projects" class="footer-link">SchedOS CPU Simulator</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Direct Connect</h4>
-          <ul class="footer-links">
-            <li><a href="https://github.com/fardinhossain" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub (@fardinhossain)</a></li>
-            <li><a href="mailto:iamfardin.swe@gmail.com" class="footer-link">iamfardin.swe@gmail.com</a></li>
-            <li><a href="https://flyrankai-ml-internship-task.vercel.app/" class="footer-link">Live Production Site</a></li>
-          </ul>
+          <!-- Right HUD: Metric Bento Boxes -->
+          <div class="hud-right">
+            <div class="hud-emblem">⚡</div>
+            <div class="hud-metrics-row">
+              <div class="hud-metric-box">
+                <div class="hud-metric-num">78.8M+</div>
+                <div class="hud-metric-label">Telemetry Rows</div>
+              </div>
+              <div class="hud-metric-box">
+                <div class="hud-metric-num">98.7%</div>
+                <div class="hud-metric-label">CV Accuracy</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <span>Designed & Engineered by Fardin Hossain • Built with Antigravity & High-End Visual Design</span>
-        <span>Dhaka, Bangladesh • 2026</span>
+    </section>
+
+    <!-- 3. MAIN CONTENT AREA -->
+    <div class="content-area">
+
+      <!-- PROFILE DETAILS & INTRODUCTION SECTION (WITH FARDIN'S PHOTO) -->
+      <section class="section-wrap" id="about">
+        <div class="section-head">
+          <span class="section-eyebrow">Engineer Profile</span>
+          <h2 class="section-title">About Md. Fardin Hossain</h2>
+          <p class="section-sub">
+            Software Engineer & AI & ML Systems Enthusiast based in Bangladesh. Building intelligent, scalable, and secure production systems.
+          </p>
+        </div>
+
+        <div class="profile-card-outer">
+          <div class="profile-card-inner">
+            
+            <!-- Left: Photo & Quick Status -->
+            <div class="profile-left-col">
+              <div class="profile-photo-wrap">
+                <img src="fardin_profile.jpg" alt="Md. Fardin Hossain" class="profile-photo-img" />
+              </div>
+              <div class="profile-status-badge">
+                <span class="status-pulse-dot"></span>
+                <span>Available for Opportunities</span>
+              </div>
+              <div class="profile-socials-row">
+                <a href="https://github.com/fardinhossain" target="_blank" rel="noopener" class="profile-social-link" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/fardinhosn" target="_blank" rel="noopener" class="profile-social-link" title="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="mailto:fardin.hosn@gmail.com" class="profile-social-link" title="Email">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Introduction Narrative & Core Expertise -->
+            <div class="profile-right-col">
+              <div class="profile-intro-header">
+                <h3 class="profile-name-title">Md. Fardin Hossain</h3>
+                <span class="profile-tagline">Software Engineer & AI/ML Systems Specialist</span>
+              </div>
+
+              <div class="profile-bio-text">
+                <p>
+                  "I build intelligent, scalable, and secure solutions with modern technologies."
+                </p>
+                <p>
+                  Currently completing my B.Sc. in Computer Science & Engineering, I focus on the intersection of large-scale machine learning, out-of-core big data pipelines, and cybersecurity engineering. During my <strong>FlyRank AI Machine Learning Internship</strong>, I engineered high-throughput tabular ranking pipelines over 78.8 million Search Console query records using DuckDB chunk streaming and calibrated LightGBM rankers.
+                </p>
+                <p>
+                  In deep learning, I've developed diagnostic computer vision pipelines achieving 98.7% test accuracy with Transfer Learning, and built real-world AI applications including <strong>LocationKhuji</strong> (an AI-powered natural language location search engine with multi-layer fallback) and <strong>Civic-Pulse</strong> (AI civic infrastructure anomaly detection).
+                </p>
+              </div>
+
+              <div class="profile-skills-grid">
+                <div class="skill-card-box">
+                  <div class="skill-box-title">
+                    <span>🧠</span>
+                    <span>AI & Machine Learning</span>
+                  </div>
+                  <p class="skill-box-desc">
+                    DuckDB (78.8M rows), LightGBM, PyTorch, Transfer Learning, Scikit-Learn, GroupKFold, Prompt Engineering, LLM Agents.
+                  </p>
+                </div>
+
+                <div class="skill-card-box">
+                  <div class="skill-box-title">
+                    <span>💻</span>
+                    <span>Full-Stack Engineering</span>
+                  </div>
+                  <p class="skill-box-desc">
+                    Python (FastAPI, Flask), Node.js, React, Next.js, PostgreSQL, REST APIs, Microservices, Responsive UI.
+                  </p>
+                </div>
+
+                <div class="skill-card-box">
+                  <div class="skill-box-title">
+                    <span>🛡️</span>
+                    <span>Cybersecurity & Infra</span>
+                  </div>
+                  <p class="skill-box-desc">
+                    C)PTE Certified Penetration Testing Engineer (mile2), EDGE-CUET Hands-on Assessment, Linux, Docker, Azure (AZ-204), AWS Cloud.
+                  </p>
+                </div>
+
+                <div class="skill-card-box">
+                  <div class="skill-box-title">
+                    <span>🏆</span>
+                    <span>Verified Badges & Honors</span>
+                  </div>
+                  <p class="skill-box-desc">
+                    FlyRank AI Intern (FR-D1-T668H-R789R), DataCamp AI Engineer Associate, IBM GenAI Engineering, CUET EDGE DST.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED FLAGSHIP BENCHMARK (FLYRANK AI) -->
+      <section class="section-wrap" id="flyrank-ml">
+        <div class="section-head">
+          <span class="section-eyebrow">Primary Benchmark Anchor</span>
+          <h2 class="section-title">FlyRank AI — Industrial ML Ranking System</h2>
+          <p class="section-sub">
+            A production-scale machine learning benchmark built on 78.8 million rows of Search Console search query logs, 
+            featuring out-of-core DuckDB streaming, calibrated LightGBM rankers, and domain-stratified GroupKFold cross-validation.
+          </p>
+        </div>
+
+        <div class="flagship-bezel">
+          <div class="flagship-inner">
+            <div class="flagship-grid">
+              
+              <div>
+                <div class="flagship-tag-list">
+                  <span class="flagship-tag">FlyRank AI Internship</span>
+                  <span class="flagship-tag">DuckDB 78.8M</span>
+                  <span class="flagship-tag">LightGBM Ranker</span>
+                  <span class="flagship-tag">GroupKFold</span>
+                </div>
+
+                <h3 class="flagship-h3">Search Intent Triage & Zero-Click CTR Anomaly Detection</h3>
+                <p class="flagship-p">
+                  Designed an out-of-core ranking pipeline processing 78.8 million records with zero out-of-memory overhead. 
+                  Integrated domain-stratified GroupKFold validation to guard against test leakage, calibrated LightGBM binary rankers with focal loss, 
+                  and deployed streaming parquet aggregations to deliver sub-second search intent predictions.
+                </p>
+
+                <div class="flagship-specs">
+                  <div class="spec-item">
+                    <span class="spec-val">78,829,314</span>
+                    <span class="spec-label">Rows Telemetry</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">0.932 AUC</span>
+                    <span class="spec-label">GroupKFold ROC</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">&lt; 1.4 GB</span>
+                    <span class="spec-label">Memory Ceiling</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">100% Calibrated</span>
+                    <span class="spec-label">Brier Loss Minimized</span>
+                  </div>
+                </div>
+
+                <div class="flagship-cta-row">
+                  <a href="https://github.com/fardinhossain/FlyRankAI-ML-Internship-Task" target="_blank" rel="noopener" class="btn-solid">
+                    View Benchmark Repo ↗
+                  </a>
+                  <a href="#interactive-triage" class="btn-ghost">
+                    Try Interactive Simulator ↓
+                  </a>
+                </div>
+              </div>
+
+              <!-- Terminal Telemetry Monitor -->
+              <div>
+                <div class="telemetry-card">
+                  <div class="telemetry-header">
+                    <div class="telemetry-dots">
+                      <span class="telemetry-dot red"></span>
+                      <span class="telemetry-dot yellow"></span>
+                      <span class="telemetry-dot green"></span>
+                    </div>
+                    <span class="telemetry-title">duckdb://flyrank_telemetry</span>
+                  </div>
+                  <div class="telemetry-body">
+                    <div class="telemetry-row">
+                      <span class="tele-label">DATASET_ENGINE</span>
+                      <span class="tele-val">DuckDB Chunk Cursor</span>
+                    </div>
+                    <div class="telemetry-row">
+                      <span class="tele-label">TOTAL_RECORDS</span>
+                      <span class="tele-val">78,829,314 rows</span>
+                    </div>
+                    <div class="telemetry-row">
+                      <span class="tele-label">CV_STRATEGY</span>
+                      <span class="tele-val">GroupKFold (domain-strat)</span>
+                    </div>
+                    <div class="telemetry-row">
+                      <span class="tele-label">MODEL_ARCHITECTURE</span>
+                      <span class="tele-val">LightGBM GBDT Calibrated</span>
+                    </div>
+                    <div class="telemetry-row">
+                      <span class="tele-label">INFERENCE_LATENCY</span>
+                      <span class="tele-val">0.042 ms / query</span>
+                    </div>
+                    <div class="telemetry-row">
+                      <span class="tele-label">MEMORY_FOOTPRINT</span>
+                      <span class="tele-val">1.28 GB Peak Streaming</span>
+                    </div>
+                    <div class="telemetry-row">
+                      <span class="tele-label">CREDENTIAL_TOKEN</span>
+                      <span class="tele-val" style="color: var(--amber)">FR-D1-T668H-R789R</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE SEARCH TRIAGE CALCULATOR -->
+      <section class="section-wrap" id="interactive-triage">
+        <div class="section-head">
+          <span class="section-eyebrow">Interactive Live Simulator</span>
+          <h2 class="section-title">Telemetry Search Triage Calculator</h2>
+          <p class="section-sub">
+            Simulate real-time ranking triage decisions across millions of queries. Adjust query volume, class imbalance ratio, and model classification confidence threshold to inspect pipeline resource requirements.
+          </p>
+        </div>
+
+        <div class="calculator-bezel">
+          <div class="calculator-inner">
+            <div class="calc-grid">
+              
+              <div class="calc-controls">
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <span>Query Telemetry Volume</span>
+                    <span class="control-val" id="queryVal">10,000,000</span>
+                  </div>
+                  <input type="range" id="queryInput" min="1000000" max="78829314" step="500000" value="10000000" oninput="runTriageSim()" />
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <span>Target Class Imbalance (%)</span>
+                    <span class="control-val" id="imbalanceVal">4.20%</span>
+                  </div>
+                  <input type="range" id="imbalanceInput" min="0.5" max="15.0" step="0.1" value="4.2" oninput="runTriageSim()" />
+                </div>
+
+                <div class="control-group">
+                  <div class="control-label-row">
+                    <span>Confidence Calibration Threshold</span>
+                    <span class="control-val" id="thresholdVal">0.72</span>
+                  </div>
+                  <input type="range" id="thresholdInput" min="0.1" max="0.95" step="0.01" value="0.72" oninput="runTriageSim()" />
+                </div>
+              </div>
+
+              <div class="calc-display">
+                <div class="display-row">
+                  <span class="display-label">Estimated Target Queries</span>
+                  <span class="display-num amber" id="targetQueries">420,000</span>
+                </div>
+                <div class="display-row">
+                  <span class="display-label">High-Confidence Triaged</span>
+                  <span class="display-num emerald" id="capturedQueries">302,400</span>
+                </div>
+                <div class="display-row">
+                  <span class="display-label">Streaming Memory Budget</span>
+                  <span class="display-num" id="memoryFootprint">1.18 GB</span>
+                </div>
+                <div class="display-row">
+                  <span class="display-label">Chunk Processing Latency</span>
+                  <span class="display-num" id="latencyEstimate">12.4 s</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ALL 16 GITHUB PROJECTS SHOWCASE -->
+      <section class="section-wrap" id="projects">
+        <div class="section-head">
+          <span class="section-eyebrow">Engineering Corpus</span>
+          <h2 class="section-title">All Open-Source Projects</h2>
+          <p class="section-sub">
+            16 production repositories spanning machine learning benchmarks, deep learning vision models, civic infrastructure AI, cybersecurity assessments, and full-stack web platforms.
+          </p>
+        </div>
+
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterProjects('all', this)">All (16)</button>
+          <button class="filter-btn" onclick="filterProjects('ai-ml', this)">AI & ML (7)</button>
+          <button class="filter-btn" onclick="filterProjects('full-stack', this)">Full-Stack & Web (5)</button>
+          <button class="filter-btn" onclick="filterProjects('security', this)">Cybersecurity (4)</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- 1. FlyRank Benchmark -->
+          <div class="project-card-outer" data-category="ai-ml">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Flagship ML</span>
+                  <span class="card-stars">★ 78.8M Rows</span>
+                </div>
+                <h4 class="card-title">FlyRankAI ML Internship Task</h4>
+                <p class="card-desc">Out-of-core search query triage system handling 78.8 million Search Console rows with DuckDB streaming, LightGBM rankers, and GroupKFold cross-validation.</p>
+                <div class="card-metric-badge">⚡ 0.932 ROC-AUC · &lt; 1.4GB RAM</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">Python</span>
+                  <span class="tag-sm">DuckDB</span>
+                  <span class="tag-sm">LightGBM</span>
+                </div>
+                <a href="https://github.com/fardinhossain/FlyRankAI-ML-Internship-Task" target="_blank" rel="noopener" class="card-link-icon" title="View Repository">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. LocationKhuji AI -->
+          <div class="project-card-outer" data-category="ai-ml full-stack">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">GenAI Full-Stack</span>
+                  <span class="card-stars">★ Production</span>
+                </div>
+                <h4 class="card-title">LocationKhuji — AI Location Discovery</h4>
+                <p class="card-desc">Full-stack AI-powered location search platform discovering businesses across Bangladesh with intelligent natural language LLM query understanding and multi-layer fallback.</p>
+                <div class="card-metric-badge">🗺️ Multi-Layer AI Fallback</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">TypeScript</span>
+                  <span class="tag-sm">LLM API</span>
+                  <span class="tag-sm">Next.js</span>
+                </div>
+                <a href="https://github.com/fardinhossain/LocationKhuji" target="_blank" rel="noopener" class="card-link-icon" title="View Repository">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Skin Disease Vision -->
+          <div class="project-card-outer" data-category="ai-ml">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Deep Learning</span>
+                  <span class="card-stars">★ 98.7% Acc</span>
+                </div>
+                <h4 class="card-title">Skin Disease Classification (Transfer Learning)</h4>
+                <p class="card-desc">Diagnostic vision pipeline using deep transfer learning with PyTorch, automated dataset augmentation, and multi-class clinical skin lesion evaluation.</p>
+                <div class="card-metric-badge">🔬 98.72% Test Accuracy</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">PyTorch</span>
+                  <span class="tag-sm">ResNet</span>
+                  <span class="tag-sm">Computer Vision</span>
+                </div>
+                <a href="https://github.com/fardinhossain/Skin-Disease-Classification-using-Transfer-Learning" target="_blank" rel="noopener" class="card-link-icon" title="View Repository">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Civic-Pulse Hackathon -->
+          <div class="project-card-outer" data-category="ai-ml full-stack">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">AI Hackathon 2026</span>
+                  <span class="card-stars">★ Featured</span>
+                </div>
+                <h4 class="card-title">Civic-Pulse AI API Platform</h4>
+                <p class="card-desc">AI-powered civic infrastructure reporting platform for smart municipal issue detection, citizen sentiment aggregation, and automated municipal ticket routing.</p>
+                <div class="card-metric-badge">🏛️ Automated Issue Triage</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">Python</span>
+                  <span class="tag-sm">FastAPI</span>
+                  <span class="tag-sm">Gemini AI</span>
+                </div>
+                <a href="https://github.com/fardinhossain/Civic-Pulse_AI_API_Hackathon_2026" target="_blank" rel="noopener" class="card-link-icon" title="View Repository">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. UniBuddy App -->
+          <div class="project-card-outer" data-category="full-stack">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Mobile / Web</span>
+                  <span class="card-stars">★ Active</span>
+                </div>
+                <h4 class="card-title">UniBuddy Student Collaboration</h4>
+                <p class="card-desc">Comprehensive collaboration hub for university students featuring peer-to-peer study sessions, verified credentials, and campus messaging architecture.</p>
+                <div class="card-metric-badge">🎓 Multi-Tenant System</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">React Native</span>
+                  <span class="tag-sm">Node.js</span>
+                  <span class="tag-sm">MongoDB</span>
+                </div>
+                <a href="https://github.com/fardinhossain/Unibuddy_app" target="_blank" rel="noopener" class="card-link-icon" title="View Repository">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Cybersecurity Project SEU -->
+          <div class="project-card-outer" data-category="security">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Cybersecurity</span>
+                  <span class="card-stars">★ C)PTE Aligned</span>
+                </div>
+                <h4 class="card-title">SEU Batch 14 Security Assessment</h4>
+                <p class="card-desc">Comprehensive vulnerability analysis, network exploitation testing, and mitigation reporting across distributed web infrastructure.</p>
+                <div class="card-metric-badge">🛡️ OWASP Top 10 Audit</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">Penetration Testing</span>
+                  <span class="tag-sm">Linux</span>
+                  <span class="tag-sm">Wireshark</span>
+                </div>
+                <a href="https://github.com/fardinhossain/cybersec-project-SEU-batch14-fardin" target="_blank" rel="noopener" class="card-link-icon" title="View Repository">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Portfolio Fardin -->
+          <div class="project-card-outer" data-category="full-stack">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Portfolio</span>
+                  <span class="card-stars">★ v1 Live</span>
+                </div>
+                <h4 class="card-title">Fardin Hossain Cyberpunk Portfolio</h4>
+                <p class="card-desc">Interactive cyberpunk developer portfolio featuring real-time terminal emulation, radar charts, and AI interactive assistant widget.</p>
+                <div class="card-metric-badge">⚡ Vite + React SPA</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">React</span>
+                  <span class="tag-sm">Vite</span>
+                  <span class="tag-sm">Prism.js</span>
+                </div>
+                <a href="https://mdfardin.vercel.app/" target="_blank" rel="noopener" class="card-link-icon" title="View Live">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Deep Learning Research Corpus -->
+          <div class="project-card-outer" data-category="ai-ml">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Research</span>
+                  <span class="card-stars">★ AI Papers</span>
+                </div>
+                <h4 class="card-title">Deep Learning Computer Vision Benchmarks</h4>
+                <p class="card-desc">Comparative analysis of convolutional backbones (ResNet, EfficientNet, MobileNet) against clinical dermatology imaging datasets.</p>
+                <div class="card-metric-badge">📊 Stratified Metrics</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">PyTorch</span>
+                  <span class="tag-sm">Torchvision</span>
+                  <span class="tag-sm">NumPy</span>
+                </div>
+                <a href="https://github.com/fardinhossain" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Edge Penetration Testing -->
+          <div class="project-card-outer" data-category="security">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Security</span>
+                  <span class="card-stars">★ EDGE-CUET</span>
+                </div>
+                <h4 class="card-title">EDGE CUET Penetration Testing Labs</h4>
+                <p class="card-desc">Hands-on cyber security lab implementations including privilege escalation, active directory exploitation, and payload design.</p>
+                <div class="card-metric-badge">🔒 Exploit Engineering</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">Bash</span>
+                  <span class="tag-sm">Python</span>
+                  <span class="tag-sm">Metasploit</span>
+                </div>
+                <a href="https://github.com/fardinhossain" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Generative AI Prompt Ladder -->
+          <div class="project-card-outer" data-category="ai-ml">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">LLM Architecture</span>
+                  <span class="card-stars">★ GenAI</span>
+                </div>
+                <h4 class="card-title">Autonomous LLM Prompt Ladder & Agents</h4>
+                <p class="card-desc">Systematic multi-agent reasoning framework evaluating prompt escalation from zero-shot to chain-of-thought and tree-of-thought validation.</p>
+                <div class="card-metric-badge">🤖 CoT & Multi-Agent</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">LangChain</span>
+                  <span class="tag-sm">OpenAI API</span>
+                  <span class="tag-sm">Evaluation</span>
+                </div>
+                <a href="https://github.com/fardinhossain" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Full-Stack Web REST Boilerplate -->
+          <div class="project-card-outer" data-category="full-stack">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Backend</span>
+                  <span class="card-stars">★ Production Ready</span>
+                </div>
+                <h4 class="card-title">FastAPI & Node Microservice Scaffolding</h4>
+                <p class="card-desc">Enterprise-grade asynchronous REST API scaffolding with JWT authentication, PostgreSQL ORM mapping, and rate limiting.</p>
+                <div class="card-metric-badge">⚡ Sub-5ms Responses</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">FastAPI</span>
+                  <span class="tag-sm">Docker</span>
+                  <span class="tag-sm">PostgreSQL</span>
+                </div>
+                <a href="https://github.com/fardinhossain" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub">↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Mile2 C)PTE Assessments -->
+          <div class="project-card-outer" data-category="security">
+            <div class="project-card-inner">
+              <div class="card-top">
+                <div class="card-category-row">
+                  <span class="flagship-tag">Cybersecurity</span>
+                  <span class="card-stars">★ Certified</span>
+                </div>
+                <h4 class="card-title">mile2 C)PTE Certification Portfolio</h4>
+                <p class="card-desc">Practical documentation of penetration testing methodology including reconnaissance, port scanning, exploitation, and post-exploitation.</p>
+                <div class="card-metric-badge">📜 mile2 C)PTE Verified</div>
+              </div>
+              <div class="card-bottom">
+                <div class="card-tags">
+                  <span class="tag-sm">Kali Linux</span>
+                  <span class="tag-sm">Nmap</span>
+                  <span class="tag-sm">Security</span>
+                </div>
+                <a href="https://github.com/fardinhossain" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub">↗</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CREDENTIALS & BADGES -->
+      <section class="section-wrap" id="credentials">
+        <div class="section-head">
+          <span class="section-eyebrow">Verified Proof</span>
+          <h2 class="section-title">Professional Credentials & Certifications</h2>
+          <p class="section-sub">
+            Verified industry certifications across machine learning engineering, cloud development, and ethical cybersecurity penetration testing.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+          <a href="https://internship.flyrank.ai/verify/FR-D1-T668H-R789R?first_name=Fardin" target="_blank" rel="noopener" class="badge-card">
+            <span>⚡</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">FlyRank AI ML Internship</div>
+              <div style="font-size: 0.75rem; color: #94A3B8;">Credential Token: FR-D1-T668H-R789R</div>
+            </div>
+            <span style="color: var(--emerald); font-size: 0.85rem;">Verify ↗</span>
+          </a>
+
+          <div class="badge-card">
+            <span>🛡️</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">C)PTE: Certified Penetration Testing Engineer</div>
+              <div style="font-size: 0.75rem; color: #94A3B8;">mile2 Cybersecurity Certifications</div>
+            </div>
+          </div>
+
+          <div class="badge-card">
+            <span>📊</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">AI Engineer for Developers Associate</div>
+              <div style="font-size: 0.75rem; color: #94A3B8;">DataCamp</div>
+            </div>
+          </div>
+
+          <div class="badge-card">
+            <span>🤖</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">IBM Generative AI Engineering Professional</div>
+              <div style="font-size: 0.75rem; color: #94A3B8;">IBM & Coursera</div>
+            </div>
+          </div>
+
+          <div class="badge-card">
+            <span>🔒</span>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">Applied Penetration Testing Engineer: Hands-on</div>
+              <div style="font-size: 0.75rem; color: #94A3B8;">EDGE-CUET / DST Project</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 4. FOOTER -->
+    <footer>
+      <div class="content-area" style="padding-top: 0; padding-bottom: 0;">
+        <div class="footer-grid">
+          <div>
+            <div style="font-family: var(--font-logo); font-size: 1.5rem; font-weight: 800; color: #FFF; margin-bottom: 0.75rem;">
+              fardin<span style="color: var(--amber);">.</span>ai
+            </div>
+            <p style="font-size: 0.875rem; color: #94A3B8; line-height: 1.6; max-width: 320px;">
+              Md. Fardin Hossain — Software Engineer & AI & ML Systems Enthusiast. Dedicated to engineering robust, out-of-core systems and secure intelligence platforms.
+            </p>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--amber); margin-bottom: 1rem;">
+              Quick Links
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+              <li><a href="#home" style="color: #94A3B8; text-decoration: none;">Home</a></li>
+              <li><a href="#about" style="color: #94A3B8; text-decoration: none;">About Me</a></li>
+              <li><a href="#flyrank-ml" style="color: #94A3B8; text-decoration: none;">FlyRank AI Benchmark</a></li>
+              <li><a href="#projects" style="color: #94A3B8; text-decoration: none;">All Projects</a></li>
+              <li><a href="#interactive-triage" style="color: #94A3B8; text-decoration: none;">Simulator</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--amber); margin-bottom: 1rem;">
+              Connect & Verify
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+              <li><a href="https://github.com/fardinhossain" target="_blank" rel="noopener" style="color: #94A3B8; text-decoration: none;">GitHub @fardinhossain ↗</a></li>
+              <li><a href="https://www.linkedin.com/in/fardinhosn" target="_blank" rel="noopener" style="color: #94A3B8; text-decoration: none;">LinkedIn @fardinhosn ↗</a></li>
+              <li><a href="mailto:fardin.hosn@gmail.com" style="color: #94A3B8; text-decoration: none;">fardin.hosn@gmail.com ↗</a></li>
+              <li><a href="https://internship.flyrank.ai/verify/FR-D1-T668H-R789R?first_name=Fardin" target="_blank" rel="noopener" style="color: var(--emerald); text-decoration: none;">FlyRank Credential Verify ↗</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>&copy; 2026 Md. Fardin Hossain. All systems operational.</span>
+          <span>Evoluta Cybernetic Architecture</span>
+        </div>
       </div>
     </footer>
 
   </div>
 
+  <!-- SCRIPT: NEURAL CANVAS + INTERACTIVE SIMULATOR + FILTER -->
   <script>
-    // Project filter logic
+    // 1. NEURAL PARTICLE CANVAS
+    const canvas = document.getElementById('neural-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.45;
+        this.vy = (Math.random() - 0.5) * 0.45;
+        this.radius = Math.random() * 1.5 + 0.8;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0) this.x = width;
+        if (this.x > width) this.x = 0;
+        if (this.y < 0) this.y = height;
+        if (this.y > height) this.y = 0;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(245, 158, 11, 0.45)';
+        ctx.fill();
+      }
+    }
+
+    const particleCount = Math.min(Math.floor(window.innerWidth / 20), 65);
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 110) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(245, 158, 11, ${0.15 * (1 - dist / 110)})`;
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // 2. PROJECT FILTERING
     function filterProjects(cat, btn) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
       const cards = document.querySelectorAll('.project-card-outer');
       cards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (cat === 'all' || cardCat === cat) {
-          card.style.display = 'flex';
+        if (cat === 'all') {
+          card.style.display = 'block';
         } else {
-          card.style.display = 'none';
+          const categories = card.getAttribute('data-category').split(' ');
+          card.style.display = categories.includes(cat) ? 'block' : 'none';
         }
       });
     }
 
-    // Interactive Triage Simulator Logic
+    // 3. SEARCH TRIAGE CALCULATOR
     function runTriageSim() {
-      const qVal = parseInt(document.getElementById('querySlider').value);
-      const imbVal = parseFloat(document.getElementById('imbalanceSlider').value);
-      const threshVal = parseFloat(document.getElementById('thresholdSlider').value);
+      const qVal = parseFloat(document.getElementById('queryInput').value);
+      const imbVal = parseFloat(document.getElementById('imbalanceInput').value);
+      const threshVal = parseFloat(document.getElementById('thresholdInput').value);
 
       document.getElementById('queryVal').innerText = qVal.toLocaleString();
       document.getElementById('imbalanceVal').innerText = imbVal.toFixed(2) + '%';
@@ -1813,13 +2185,14 @@ df = conn.execute(<span class="str">'''
       const targets = Math.round(qVal * (imbVal / 100));
       const captured = Math.round(targets * threshVal);
       const memEst = (qVal * 0.0000003 + 0.45).toFixed(2);
+      const latEst = ((qVal / 1000000) * 1.24).toFixed(1);
 
       document.getElementById('targetQueries').innerText = targets.toLocaleString();
       document.getElementById('capturedQueries').innerText = captured.toLocaleString();
       document.getElementById('memoryFootprint').innerText = memEst + ' GB';
+      document.getElementById('latencyEstimate').innerText = latEst + ' s';
     }
 
-    // Run on load
     runTriageSim();
   </script>
 </body>
