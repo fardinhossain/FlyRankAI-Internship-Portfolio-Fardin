@@ -1576,7 +1576,420 @@
       }
     }
 
+  
+    /* -------------------------------------------------------------
+       INTERACTIVE REACT + FRAMER MOTION PROJECT SHOWCASE
+    -------------------------------------------------------------- */
+    .project-showcase-wrap {
+      width: 100%;
+    }
+
+    /* Filter Bar */
+    .filter-bar-react {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 2.5rem;
+      align-items: center;
+    }
+
+    .filter-btn-react {
+      position: relative;
+      padding: 0.65rem 1.35rem;
+      border-radius: 9999px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #94A3B8;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: color 0.25s ease, border-color 0.25s ease;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .filter-btn-react:hover {
+      color: #F8FAFC;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .filter-btn-react.active {
+      color: #F8FAFC;
+      border-color: transparent;
+    }
+
+    .filter-active-pill {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.16);
+      border: 1px solid rgba(245, 158, 11, 0.55);
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.22);
+      z-index: 0;
+    }
+
+    .filter-btn-label {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Grid */
+    .projects-grid-react {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid-react {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Project Cards Outer & Inner */
+    .project-card-outer {
+      position: relative;
+      background: var(--bg-bezel);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 5px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform;
+    }
+
+    .project-card-outer:hover {
+      border-color: rgba(245, 158, 11, 0.45);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.18);
+    }
+
+    /* Featured Project Standout */
+    .project-card-outer.project-card-featured {
+      border-color: rgba(245, 158, 11, 0.55);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85), 0 0 35px rgba(245, 158, 11, 0.2);
+    }
+
+    .flagship-tag.featured-badge {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.1) 100%);
+      border-color: #F59E0B;
+      color: #FDE68A;
+      font-weight: 700;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);
+    }
+
+    .project-card-inner {
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(10, 12, 18, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1.5rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .card-spotlight-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .card-top, .card-bottom {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-btn-view {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #F59E0B;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .card-btn-view:hover {
+      background: #F59E0B;
+      color: #000;
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.5);
+    }
+
+    .tag-more {
+      background: rgba(255, 255, 255, 0.04);
+      color: #94A3B8;
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    /* -------------------------------------------------------------
+       MODAL DIALOG & ACCESSIBLE OVERLAY
+    -------------------------------------------------------------- */
+    .project-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .project-modal-dialog {
+      position: relative;
+      width: 100%;
+      max-width: 680px;
+      max-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      background: #08090D;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 45px rgba(245, 158, 11, 0.2);
+      overflow: hidden;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 1.75rem 2rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .modal-header-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .modal-badges-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .modal-title {
+      font-family: var(--font-sans);
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #F8FAFC;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .modal-tagline {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: #F59E0B;
+      margin: 0;
+    }
+
+    .modal-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #94A3B8;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.5);
+      color: #F87171;
+    }
+
+    .modal-body {
+      padding: 1.5rem 2rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .modal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .modal-body::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .modal-body::-webkit-scrollbar-thumb {
+      background: rgba(245, 158, 11, 0.35);
+      border-radius: 9999px;
+    }
+
+    .modal-section-title {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #94A3B8;
+      margin: 0 0 0.6rem 0;
+    }
+
+    .modal-desc-text {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #CBD5E1;
+      margin: 0;
+    }
+
+    .modal-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .modal-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #E2E8F0;
+    }
+
+    .feature-bullet {
+      color: #F59E0B;
+      font-size: 0.65rem;
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
+
+    .modal-tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .modal-tech-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #E2E8F0;
+    }
+
+    .modal-footer {
+      padding: 1.25rem 2rem;
+      background: rgba(10, 12, 18, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .modal-actions-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .modal-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 10px;
+      background: #F59E0B;
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .modal-btn-primary:hover {
+      background: #FBBF24;
+      box-shadow: 0 0 28px rgba(245, 158, 11, 0.6);
+      transform: translateY(-1px);
+    }
+
+    .modal-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #F8FAFC;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .modal-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(245, 158, 11, 0.5);
+      color: #F59E0B;
+    }
+
+    .modal-btn-dismiss {
+      padding: 0.65rem 1.25rem;
+      border-radius: 10px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94A3B8;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .modal-btn-dismiss:hover {
+      color: #F8FAFC;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
   </style>
+  <!-- ESM Importmap for React 18 & Framer Motion -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18.3.1",
+      "react-dom": "https://esm.sh/react-dom@18.3.1",
+      "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+      "framer-motion": "https://esm.sh/framer-motion@11.11.11?deps=react@18.3.1,react-dom@18.3.1"
+    }
+  }
+  </script>
+
 </head>
 <body>
 
@@ -1903,272 +2316,8 @@
           </p>
         </div>
 
-        <div class="filter-bar">
-          <button class="filter-btn active" onclick="filterProjects('all', this)">All (10)</button>
-          <button class="filter-btn" onclick="filterProjects('ai-ml', this)">AI & Machine Learning (4)</button>
-          <button class="filter-btn" onclick="filterProjects('web', this)">Live Web Platforms (5)</button>
-          <button class="filter-btn" onclick="filterProjects('systems', this)">Systems & Security (3)</button>
-        </div>
-
-        <div class="projects-grid" id="projectsGrid">
-
-          <!-- 1. LocationKhuji (WITH LIVE LINK) -->
-          <div class="project-card-outer" data-category="ai-ml web">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">MERN + GenAI</span>
-                  <span class="card-stars">★ Live Deployed</span>
-                </div>
-                <h4 class="card-title">LocationKhuji</h4>
-                <p class="card-desc">Full-stack AI-powered location search platform for discovering businesses and services across Bangladesh with intelligent natural language LLM query understanding and multi-layer fallback.</p>
-                <a href="https://locationkhuji.vercel.app/" target="_blank" rel="noopener" class="card-live-pill">
-                  <span>🌐</span>
-                  <span>locationkhuji.vercel.app ↗</span>
-                </a>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">MERN Stack</span>
-                  <span class="tag-sm">LLM Search</span>
-                  <span class="tag-sm">React</span>
-                </div>
-                <div class="card-links-group">
-                  <a href="https://github.com/fardinhossain/Locationkhuji" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">⌥</a>
-                  <a href="https://locationkhuji.vercel.app/" target="_blank" rel="noopener" class="card-link-icon" title="View Live App">↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2. SchedOS (WITH LIVE LINK) -->
-          <div class="project-card-outer" data-category="web systems">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">Operating Systems</span>
-                  <span class="card-stars">★ Live Deployed</span>
-                </div>
-                <h4 class="card-title">SchedOS — CPU Scheduling Simulator</h4>
-                <p class="card-desc">Interactive Operating System CPU Scheduling Algorithm Simulator with real-time dynamic Gantt charts, turnaround/waiting time analytics, and algorithm comparisons.</p>
-                <a href="https://sched-os.vercel.app" target="_blank" rel="noopener" class="card-live-pill">
-                  <span>🌐</span>
-                  <span>sched-os.vercel.app ↗</span>
-                </a>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">JavaScript</span>
-                  <span class="tag-sm">OS Algorithms</span>
-                  <span class="tag-sm">Simulations</span>
-                </div>
-                <div class="card-links-group">
-                  <a href="https://github.com/fardinhossain/SchedOS" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">⌥</a>
-                  <a href="https://sched-os.vercel.app" target="_blank" rel="noopener" class="card-link-icon" title="View Live App">↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. SEU-Routine_Maker (WITH LIVE LINK) -->
-          <div class="project-card-outer" data-category="web">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">EdTech Tool</span>
-                  <span class="card-stars">★ Live Deployed</span>
-                </div>
-                <h4 class="card-title">SEU Routine Maker</h4>
-                <p class="card-desc">A modern, mobile-friendly university routine generator and class scheduling assistant for SEU students with conflict-free routine creation.</p>
-                <a href="https://seuroutine.vercel.app" target="_blank" rel="noopener" class="card-live-pill">
-                  <span>🌐</span>
-                  <span>seuroutine.vercel.app ↗</span>
-                </a>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">TypeScript</span>
-                  <span class="tag-sm">Next.js</span>
-                  <span class="tag-sm">Scheduler</span>
-                </div>
-                <div class="card-links-group">
-                  <a href="https://github.com/fardinhossain/SEU-Routine_Maker" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">⌥</a>
-                  <a href="https://seuroutine.vercel.app" target="_blank" rel="noopener" class="card-link-icon" title="View Live App">↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4. GainTheBrain (WITH LIVE LINK) -->
-          <div class="project-card-outer" data-category="web">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">Productivity Platform</span>
-                  <span class="card-stars">★ Live Deployed</span>
-                </div>
-                <h4 class="card-title">GainTheBrain</h4>
-                <p class="card-desc">Interactive intellectual cognitive knowledge hub, learning acceleration, and productivity platform designed to stimulate intellectual curiosity.</p>
-                <a href="https://gainthebrain.vercel.app/" target="_blank" rel="noopener" class="card-live-pill">
-                  <span>🌐</span>
-                  <span>gainthebrain.vercel.app ↗</span>
-                </a>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">React</span>
-                  <span class="tag-sm">Web App</span>
-                  <span class="tag-sm">Productivity</span>
-                </div>
-                <div class="card-links-group">
-                  <a href="https://github.com/fardinhossain/GainTheBrain" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">⌥</a>
-                  <a href="https://gainthebrain.vercel.app/" target="_blank" rel="noopener" class="card-link-icon" title="View Live App">↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5. Civic-Pulse AI Platform (WITH LIVE LINK) -->
-          <div class="project-card-outer" data-category="ai-ml web">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">AI Hackathon 2026</span>
-                  <span class="card-stars">★ Live Deployed</span>
-                </div>
-                <h4 class="card-title">Civic-Pulse AI Platform</h4>
-                <p class="card-desc">AI-powered civic infrastructure reporting platform for smart municipal issue detection, sentiment aggregation, and automated municipal ticket triage.</p>
-                <a href="https://civicpulseai.vercel.app/" target="_blank" rel="noopener" class="card-live-pill">
-                  <span>🌐</span>
-                  <span>civicpulseai.vercel.app ↗</span>
-                </a>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">FastAPI</span>
-                  <span class="tag-sm">AI Anomaly</span>
-                  <span class="tag-sm">Civic Tech</span>
-                </div>
-                <div class="card-links-group">
-                  <a href="https://github.com/fardinhossain/Civic-Pulse_AI_API_Hackathon_2026" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">⌥</a>
-                  <a href="https://civicpulseai.vercel.app/" target="_blank" rel="noopener" class="card-link-icon" title="View Live App">↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6. Skin Disease Classification -->
-          <div class="project-card-outer" data-category="ai-ml">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">Computer Vision</span>
-                  <span class="card-stars">★ 98.7% Acc</span>
-                </div>
-                <h4 class="card-title">Skin Disease Classification</h4>
-                <p class="card-desc">Diagnostic clinical vision pipeline using deep transfer learning with GoogLeNet & MobileNet, automated dataset augmentation, and multi-class clinical skin lesion evaluation.</p>
-                <div class="flagship-tag" style="display: inline-block; margin-bottom: 0.85rem;">🔬 98.72% Clinical Test Accuracy</div>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">PyTorch</span>
-                  <span class="tag-sm">GoogLeNet</span>
-                  <span class="tag-sm">MobileNet</span>
-                </div>
-                <a href="https://github.com/fardinhossain/Skin-Disease-Classification-using-Transfer-Learning" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 7. CrisisDeskAI -->
-          <div class="project-card-outer" data-category="ai-ml systems">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">Emergency AI</span>
-                  <span class="card-stars">★ Backend API</span>
-                </div>
-                <h4 class="card-title">CrisisDeskAI Backend</h4>
-                <p class="card-desc">Intelligent Backend API for emergency & service request triage with automated priority classification, geo-clustering, and dispatch routing.</p>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">Python</span>
-                  <span class="tag-sm">FastAPI</span>
-                  <span class="tag-sm">Triage AI</span>
-                </div>
-                <a href="https://github.com/fardinhossain/CrisisDeskAI" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 8. UniBuddy App -->
-          <div class="project-card-outer" data-category="web">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">Mobile Companion</span>
-                  <span class="card-stars">★ Flutter</span>
-                </div>
-                <h4 class="card-title">UniBuddy App</h4>
-                <p class="card-desc">University companion platform built with Flutter and Appwrite backend, empowering students with course discussions, study session rooms, and verified resources.</p>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">Flutter</span>
-                  <span class="tag-sm">Appwrite</span>
-                  <span class="tag-sm">Dart</span>
-                </div>
-                <a href="https://github.com/fardinhossain/Unibuddy_app" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 9. Computer Graphics 3D Robotics -->
-          <div class="project-card-outer" data-category="systems">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">Graphics & C++</span>
-                  <span class="card-stars">★ Modern OpenGL</span>
-                </div>
-                <h4 class="card-title">3D Robotics Classroom Lab</h4>
-                <p class="card-desc">Interactive 3D Classroom & Robotics Lab simulation built in Modern OpenGL with custom lighting shaders, robotic arm kinematics, and real-time camera controls.</p>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">C++</span>
-                  <span class="tag-sm">OpenGL</span>
-                  <span class="tag-sm">GLSL</span>
-                </div>
-                <a href="https://github.com/fardinhossain/Computer-Graphics-3D-Robotics-Classroom" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 10. Cybersecurity Assessment SEU -->
-          <div class="project-card-outer" data-category="systems">
-            <div class="project-card-inner">
-              <div class="card-top">
-                <div class="card-category-row">
-                  <span class="flagship-tag">Cybersecurity</span>
-                  <span class="card-stars">★ C)PTE</span>
-                </div>
-                <h4 class="card-title">Cybersecurity Assessment Project</h4>
-                <p class="card-desc">Security assessment, vulnerability analysis, and network exploitation testing across distributed infrastructure following C)PTE penetration testing standards.</p>
-              </div>
-              <div class="card-bottom">
-                <div class="card-tags">
-                  <span class="tag-sm">Kali Linux</span>
-                  <span class="tag-sm">Penetration Testing</span>
-                  <span class="tag-sm">Security</span>
-                </div>
-                <a href="https://github.com/fardinhossain/cybersec-project-SEU-batch14-fardin" target="_blank" rel="noopener" class="card-link-icon" title="View GitHub Repo">↗</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        <!-- React + Framer Motion Interactive Project Showcase Root -->
+        <div id="projects-showcase-root"></div>
       </section>
 
       <!-- INTERACTIVE SEARCH TRIAGE CALCULATOR -->
@@ -2524,5 +2673,611 @@
       startTimer();
     })();
   </script>
+  <!-- Interactive Project Showcase Component (React 18 & Framer Motion) -->
+  <script type="module">
+    import React, { useState, useEffect, useRef, useMemo } from 'react';
+    import ReactDOM from 'react-dom/client';
+    import { motion, AnimatePresence } from 'framer-motion';
+
+    const CATEGORIES = [
+      { id: 'all', label: 'All Projects', count: 10 },
+      { id: 'ai-ml', label: 'AI & Machine Learning', count: 4 },
+      { id: 'web', label: 'Live Web Platforms', count: 5 },
+      { id: 'systems', label: 'Systems & Security', count: 3 }
+    ];
+
+    const PROJECTS_DATA = [
+      {
+        id: "civic-pulse",
+        title: "Civic-Pulse AI Platform",
+        category: ["ai-ml", "web"],
+        badge: "API Hackathon 2026",
+        status: "★ Live Deployed",
+        featured: true,
+        tagline: "AI-Powered Civic Anomaly Detection & Municipal Triage",
+        description: "AI-powered civic infrastructure reporting platform designed for smarter municipal issue detection, visual anomaly classification, automated severity triage, and citizen resolution tracking.",
+        longDescription: "Civic-Pulse is an end-to-end municipal incident reporting and intelligence platform built for urban infrastructure management. It utilizes computer vision models to classify citizen-submitted photos of road damage, electrical faults, and water leakages, assigns automated urgency scores, clusters geographically related issues to detect systematic infrastructure breakdowns, and streams real-time updates to municipal maintenance crews.",
+        features: [
+          "Real-time vision anomaly classification for municipal infrastructure defects",
+          "Automated multi-level severity scoring & dynamic priority dispatch queues",
+          "Interactive geospatial heatmaps clustering municipal failure hotspots",
+          "Public citizen dashboard with automated real-time status and resolution tracking"
+        ],
+        tags: ["FastAPI", "AI Anomaly Detection", "Civic Tech", "PyTorch", "React", "Leaflet", "PostgreSQL"],
+        github: "https://github.com/fardinhossain/Civic-Pulse_AI_API_Hackathon_2026",
+        live: "https://civicpulseai.vercel.app/"
+      },
+      {
+        id: "locationkhuji",
+        title: "LocationKhuji",
+        category: ["ai-ml", "web"],
+        badge: "MERN + GenAI",
+        status: "★ Live Deployed",
+        featured: false,
+        tagline: "Natural Language Geographic Search & Business Discovery",
+        description: "Full-stack AI-powered location search platform for discovering businesses and services across Bangladesh with intelligent natural language LLM query understanding and multi-layer fallback.",
+        longDescription: "LocationKhuji bridges conversational natural language queries and structured geospatial indexing across Bangladesh. Users can search for ambiguous local queries (e.g. 'late night pharmacy near Dhanmondi with parking'), and the underlying LLM agent extracts geographic intent, radius, and business taxonomy with high precision, falling back to fuzzy vector matching when connectivity drops.",
+        features: [
+          "Natural language LLM parsing converting conversational intent to geospatial queries",
+          "Multi-tier resilient search fallback preserving sub-100ms response latencies",
+          "Interactive Mapbox integration with verified local business points of interest",
+          "Crowdsourced verified listings and community location reviews"
+        ],
+        tags: ["MERN Stack", "LLM Search", "React", "Node.js", "Express", "MongoDB", "Geospatial Indexing"],
+        github: "https://github.com/fardinhossain/Locationkhuji",
+        live: "https://locationkhuji.vercel.app/"
+      },
+      {
+        id: "schedos",
+        title: "SchedOS — CPU Scheduling Simulator",
+        category: ["web", "systems"],
+        badge: "OS Simulator",
+        status: "★ Live Deployed",
+        featured: false,
+        tagline: "Interactive Operating Systems Process Scheduling Engine",
+        description: "Interactive visual simulation tool demonstrating modern CPU scheduling algorithms (FCFS, SJF, Round Robin, Priority) with dynamic Gantt charts, real-time metrics, and process control blocks.",
+        longDescription: "SchedOS is an educational and benchmarking tool engineered to demystify low-level operating system scheduling policies. Users can configure arbitrary process sets with varying arrival times, burst requirements, and priorities to visually analyze preemptive versus non-preemptive algorithm behaviors with microsecond accuracy.",
+        features: [
+          "Real-time visual Gantt chart generation for FCFS, SJF, SRTF, RR, Priority (Preemptive & Non-preemptive)",
+          "Automated comparison matrix for Turnaround Time, Waiting Time, and CPU Utilization",
+          "Interactive process injection during runtime to demonstrate preemption interrupts",
+          "Step-by-step playback controls with customizable simulation speeds"
+        ],
+        tags: ["JavaScript", "OS Algorithms", "Simulations", "Canvas API", "HTML5", "Systems Architecture"],
+        github: "https://github.com/fardinhossain/SchedOS",
+        live: "https://sched-os.vercel.app"
+      },
+      {
+        id: "seu-routine-maker",
+        title: "SEU Routine Maker",
+        category: ["web"],
+        badge: "Smart Scheduler",
+        status: "★ Live Deployed",
+        featured: false,
+        tagline: "Constraint-Satisfaction Academic Timetable Generator",
+        description: "Automated conflict-free university academic schedule planner and routine generator used actively by students to optimize course timetables with zero overlapping slots.",
+        longDescription: "Engineered specifically to solve the university course registration dilemma, SEU Routine Maker applies backtracking constraint satisfaction algorithms to compute non-conflicting weekly lecture schedules from messy departmental master timetable spreadsheets.",
+        features: [
+          "Constraint satisfaction algorithm eliminating overlapping exam and class time slots",
+          "Instant visual weekly timetable rendering with color-coded course modules",
+          "One-click high-resolution PDF download and Google Calendar .ICS export",
+          "Section capacity monitor and professor workload transparency"
+        ],
+        tags: ["TypeScript", "Next.js", "Scheduler Algorithms", "TailwindCSS", "Vercel", "Client Storage"],
+        github: "https://github.com/fardinhossain/SEU-Routine_Maker",
+        live: "https://seuroutine.vercel.app"
+      },
+      {
+        id: "gainthebrain",
+        title: "GainTheBrain",
+        category: ["web"],
+        badge: "EdTech Platform",
+        status: "★ Live Deployed",
+        featured: false,
+        tagline: "Cognitive Acceleration & Spaced Repetition Platform",
+        description: "Cognitive acceleration and interactive knowledge exploration web application delivering gamified learning modules, mental agility challenges, and retention analytics.",
+        longDescription: "GainTheBrain combines cognitive psychology principles with modern interactive web technologies to build high-retention learning sessions. It tracks user response latencies and accuracy decay curves to dynamically reschedule flash review cards before memory decay sets in.",
+        features: [
+          "Adaptive spaced repetition scheduling customized to user retention curves",
+          "Interactive mental arithmetic and logical challenge sprints with millisecond timers",
+          "Persistent analytics dashboard tracking streak metrics and cognitive growth",
+          "Offline-first client-side synchronization and zero-friction navigation"
+        ],
+        tags: ["React", "Web App", "Productivity", "State Management", "Vite", "PWA"],
+        github: "https://github.com/fardinhossain/GainTheBrain",
+        live: "https://gainthebrain.vercel.app/"
+      },
+      {
+        id: "skin-disease",
+        title: "Skin Disease Classification",
+        category: ["ai-ml"],
+        badge: "Deep Learning CV",
+        status: "98.7% Accuracy",
+        featured: false,
+        tagline: "Multi-Class Dermatological Diagnosis via Transfer Learning",
+        description: "Diagnostic computer vision pipeline utilizing fine-tuned GoogLeNet and MobileNet deep convolutional architectures to accurately categorize dermatological conditions across diverse clinical datasets.",
+        longDescription: "A clinical computer vision study on transfer learning architectures for diagnostic dermatology. By benchmarking modified GoogLeNet (Inception v1) against lightweight MobileNetV2 with cosine annealing learning rate schedules, the system achieved 98.7% validation accuracy while maintaining edge inference compatibility.",
+        features: [
+          "Fine-tuned GoogLeNet & MobileNetV2 with transfer learning and layer freezing strategies",
+          "Calibrated multi-class classification handling extreme clinical class imbalances",
+          "Grad-CAM visual explainability highlighting predictive lesion boundaries",
+          "Inference latency benchmarks evaluated on CPU and edge mobile runtimes"
+        ],
+        tags: ["PyTorch", "GoogLeNet", "MobileNet", "Transfer Learning", "Scikit-Learn", "OpenCV", "Grad-CAM"],
+        github: "https://github.com/fardinhossain/Skin-Disease-Classification-using-Transfer-Learning",
+        live: ""
+      },
+      {
+        id: "crisisdesk-ai",
+        title: "CrisisDeskAI Backend",
+        category: ["ai-ml", "systems"],
+        badge: "Emergency AI",
+        status: "FastAPI Core",
+        featured: false,
+        tagline: "High-Throughput Emergency Response Triage & Dispatch",
+        description: "High-performance asynchronous backend powering emergency response dispatch, NLP crisis ticket triage, automated resource allocation, and multi-tier incident priority scoring.",
+        longDescription: "CrisisDeskAI is designed for crisis response hotlines and emergency centers. It continuously ingests text tickets and transcribed call logs, running low-latency NLP models to extract caller sentiment, injury risk, and critical resource needs, routing high-urgency alerts directly to first responders.",
+        features: [
+          "Sub-20ms NLP ticket severity classification and automated incident categorization",
+          "Asynchronous non-blocking architecture built with Python 3.11 and FastAPI",
+          "Redis Pub/Sub message broker for real-time dispatch dashboard broadcast",
+          "Robust RESTful API design with comprehensive OpenAPI documentation"
+        ],
+        tags: ["Python", "FastAPI", "Triage AI", "AsyncIO", "Redis", "PostgreSQL", "Docker"],
+        github: "https://github.com/fardinhossain/CrisisDeskAI",
+        live: ""
+      },
+      {
+        id: "unibuddy",
+        title: "UniBuddy App",
+        category: ["web"],
+        badge: "Mobile & Web",
+        status: "Appwrite Cloud",
+        featured: false,
+        tagline: "Campus Student Collaboration & Resource Hub",
+        description: "Comprehensive campus companion application providing student social networking, real-time campus notices, peer-to-peer resource sharing, and verified university email authentication.",
+        longDescription: "UniBuddy centralizes decentralized student life into a unified mobile and web experience. Students can share verified study materials, post community updates, schedule group study rooms, and trade textbooks with institutional trust badges.",
+        features: [
+          "Verified institutional domain authentication ensuring campus-only safety",
+          "Real-time group messaging and channel-based announcement boards",
+          "Peer-to-peer PDF academic material library with tagging and search",
+          "Appwrite Cloud backend providing instant sync, database triggers, and file storage"
+        ],
+        tags: ["Flutter", "Appwrite", "Dart", "BaaS", "Real-time Sync", "Mobile Architecture"],
+        github: "https://github.com/fardinhossain/Unibuddy_app",
+        live: ""
+      },
+      {
+        id: "robotics-lab",
+        title: "3D Robotics Classroom Lab",
+        category: ["systems"],
+        badge: "Computer Graphics",
+        status: "OpenGL 3D",
+        featured: false,
+        tagline: "Hierarchical Robotic Kinematics & Shader Pipeline",
+        description: "Interactive 3D graphics simulation engineered with modern OpenGL and GLSL shaders featuring hierarchical robotic arm kinematics, dynamic illumination, and forward rendering.",
+        longDescription: "An exploration of 3D computer graphics pipelines and spatial mathematics. Built from scratch using modern C++ and OpenGL core profile, this simulation renders an articulate multi-degree-of-freedom robotic manipulator interacting with objects in a classroom environment.",
+        features: [
+          "Hierarchical matrix transformations simulating jointed robotic arm kinematics",
+          "Custom GLSL vertex and fragment shaders implementing Phong lighting (ambient, diffuse, specular)",
+          "Orbital and first-person camera systems with smooth quaternion rotations",
+          "Custom 3D mesh loaders and geometric primitive generation"
+        ],
+        tags: ["C++", "OpenGL", "GLSL", "GLFW", "3D Math", "Linear Algebra", "Shaders"],
+        github: "https://github.com/fardinhossain/Computer-Graphics-3D-Robotics-Classroom",
+        live: ""
+      },
+      {
+        id: "cybersecurity-assessment",
+        title: "Cybersecurity Assessment Project",
+        category: ["systems"],
+        badge: "Security Testing",
+        status: "★ C)PTE",
+        featured: false,
+        tagline: "Enterprise Vulnerability Assessment & Penetration Audit",
+        description: "Security assessment, vulnerability analysis, and network exploitation testing across distributed infrastructure following C)PTE penetration testing standards.",
+        longDescription: "A hands-on offensive security audit of isolated network architectures conducted under the Certified Penetration Testing Engineer (C)PTE methodology. Identified misconfigured services, privilege escalation attack vectors, and weak cryptographic handshakes, accompanied by hardened defense recommendations.",
+        features: [
+          "Network reconnaissance and service fingerprinting utilizing Nmap and Wireshark",
+          "Vulnerability exploitation verification across simulated Linux and Windows enterprise nodes",
+          "Post-exploitation privilege escalation and lateral movement attack simulations",
+          "Comprehensive executive remediation blueprint detailing CVSS threat prioritization"
+        ],
+        tags: ["Kali Linux", "Penetration Testing", "Wireshark", "Nmap", "Metasploit", "Security Auditing", "CVSS"],
+        github: "https://github.com/fardinhossain/cybersecurity-assessment",
+        live: ""
+      }
+    ];
+
+    // Reusable Component: ProjectCard with lightweight 3D tilt, soft amber glow, and image zoom
+    const ProjectCard = ({ project, onSelect, index }) => {
+      const cardRef = useRef(null);
+      const [rotateX, setRotateX] = useState(0);
+      const [rotateY, setRotateY] = useState(0);
+      const [spotlightPos, setSpotlightPos] = useState({ x: 50, y: 50 });
+      const [isHovered, setIsHovered] = useState(false);
+
+      const handleMouseMove = (e) => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (!cardRef.current) return;
+        const rect = cardRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const normX = (x / rect.width) - 0.5;
+        const normY = (y / rect.height) - 0.5;
+        
+        // Lightweight subtle tilt (+/- 5.5 deg)
+        setRotateX(-normY * 11);
+        setRotateY(normX * 11);
+        setSpotlightPos({ x, y });
+      };
+
+      const handleMouseEnter = () => setIsHovered(true);
+      const handleMouseLeave = () => {
+        setIsHovered(false);
+        setRotateX(0);
+        setRotateY(0);
+      };
+
+      return React.createElement(
+        motion.div,
+        {
+          layout: true,
+          initial: { opacity: 0, y: 22 },
+          animate: { opacity: 1, y: 0 },
+          exit: { opacity: 0, scale: 0.94 },
+          transition: { duration: 0.4, delay: index * 0.035, ease: [0.25, 1, 0.5, 1] },
+          className: `project-card-outer ${project.featured ? 'project-card-featured' : ''}`,
+          style: { perspective: 1000 }
+        },
+        React.createElement(
+          motion.div,
+          {
+            ref: cardRef,
+            onMouseMove: handleMouseMove,
+            onMouseEnter: handleMouseEnter,
+            onMouseLeave: handleMouseLeave,
+            onClick: () => onSelect(project),
+            animate: {
+              rotateX,
+              rotateY,
+              transformStyle: "preserve-3d"
+            },
+            transition: { type: "spring", stiffness: 320, damping: 25 },
+            className: "project-card-inner",
+            role: "button",
+            tabIndex: 0,
+            onKeyDown: (e) => { if (e.key === 'Enter' || e.key === ' ') onSelect(project); },
+            "aria-label": `View architecture and details for ${project.title}`
+          },
+          // Soft amber spotlight layer
+          isHovered && React.createElement('div', {
+            className: "card-spotlight-layer",
+            style: {
+              background: `radial-gradient(350px circle at ${spotlightPos.x}px ${spotlightPos.y}px, rgba(245, 158, 11, 0.12), transparent 70%)`
+            }
+          }),
+          // Card Top
+          React.createElement(
+            'div',
+            { className: "card-top" },
+            React.createElement(
+              'div',
+              { className: "card-category-row" },
+              React.createElement(
+                'span',
+                { className: `flagship-tag ${project.featured ? 'featured-badge' : ''}` },
+                project.featured ? '★ FEATURED AI SYSTEM' : project.badge
+              ),
+              project.status && React.createElement('span', { className: "card-stars" }, project.status)
+            ),
+            React.createElement('h4', { className: "card-title" }, project.title),
+            React.createElement('p', { className: "card-desc" }, project.description),
+            project.live && React.createElement(
+              'a',
+              {
+                href: project.live,
+                target: "_blank",
+                rel: "noopener",
+                className: "card-live-pill",
+                onClick: (e) => e.stopPropagation()
+              },
+              React.createElement('span', null, '🌐'),
+              React.createElement('span', null, `${project.live.replace('https://', '').replace('/', '')} ↗`)
+            )
+          ),
+          // Card Bottom
+          React.createElement(
+            'div',
+            { className: "card-bottom" },
+            React.createElement(
+              'div',
+              { className: "card-tags" },
+              project.tags.slice(0, 3).map((t, idx) => React.createElement('span', { key: idx, className: "tag-sm" }, t)),
+              project.tags.length > 3 && React.createElement('span', { className: "tag-sm tag-more" }, `+${project.tags.length - 3}`)
+            ),
+            React.createElement(
+              'div',
+              { className: "card-links-group" },
+              React.createElement(
+                'button',
+                {
+                  type: "button",
+                  className: "card-btn-view",
+                  onClick: (e) => { e.stopPropagation(); onSelect(project); },
+                  title: "View Technical Architecture & Features"
+                },
+                "View Details"
+              ),
+              project.github && React.createElement(
+                'a',
+                {
+                  href: project.github,
+                  target: "_blank",
+                  rel: "noopener",
+                  className: "card-link-icon",
+                  title: "View GitHub Repository",
+                  onClick: (e) => e.stopPropagation()
+                },
+                React.createElement(
+                  'svg',
+                  { width: "15", height: "15", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2" },
+                  React.createElement('path', { d: "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" })
+                )
+              ),
+              project.live && React.createElement(
+                'a',
+                {
+                  href: project.live,
+                  target: "_blank",
+                  rel: "noopener",
+                  className: "card-link-icon",
+                  title: "Open Live Web Application",
+                  onClick: (e) => e.stopPropagation()
+                },
+                "↗"
+              )
+            )
+          )
+        )
+      );
+    };
+
+    // Reusable Component: ProjectModal with spring physics and keyboard ESC support
+    const ProjectModal = ({ project, onClose }) => {
+      useEffect(() => {
+        const handleKeyDown = (e) => {
+          if (e.key === 'Escape') onClose();
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        return () => {
+          window.removeEventListener('keydown', handleKeyDown);
+          document.body.style.overflow = originalOverflow;
+        };
+      }, [onClose]);
+
+      if (!project) return null;
+
+      return React.createElement(
+        motion.div,
+        {
+          initial: { opacity: 0 },
+          animate: { opacity: 1 },
+          exit: { opacity: 0 },
+          transition: { duration: 0.22 },
+          className: "project-modal-backdrop",
+          onClick: onClose
+        },
+        React.createElement(
+          motion.div,
+          {
+            initial: { opacity: 0, scale: 0.93, y: 22 },
+            animate: { opacity: 1, scale: 1, y: 0 },
+            exit: { opacity: 0, scale: 0.93, y: 15 },
+            transition: { type: "spring", damping: 28, stiffness: 350 },
+            className: "project-modal-dialog",
+            onClick: (e) => e.stopPropagation(),
+            role: "dialog",
+            "aria-modal": "true",
+            "aria-labelledby": "modal-project-title"
+          },
+          // Modal Header
+          React.createElement(
+            'div',
+            { className: "modal-header" },
+            React.createElement(
+              'div',
+              { className: "modal-header-meta" },
+              React.createElement(
+                'div',
+                { className: "modal-badges-row" },
+                React.createElement(
+                  'span',
+                  { className: `flagship-tag ${project.featured ? 'featured-badge' : ''}` },
+                  project.featured ? '★ FEATURED AI SYSTEM' : project.badge
+                ),
+                project.status && React.createElement('span', { className: "card-stars" }, project.status)
+              ),
+              React.createElement('h3', { id: "modal-project-title", className: "modal-title" }, project.title),
+              project.tagline && React.createElement('p', { className: "modal-tagline" }, project.tagline)
+            ),
+            React.createElement(
+              'button',
+              {
+                type: "button",
+                className: "modal-close-btn",
+                onClick: onClose,
+                "aria-label": "Close modal"
+              },
+              "✕"
+            )
+          ),
+          // Modal Scrollable Body
+          React.createElement(
+            'div',
+            { className: "modal-body" },
+            // Section 1: Overview
+            React.createElement(
+              'div',
+              { className: "modal-section" },
+              React.createElement('h5', { className: "modal-section-title" }, "Architecture Overview"),
+              React.createElement('p', { className: "modal-desc-text" }, project.longDescription || project.description)
+            ),
+            // Section 2: Features
+            project.features && project.features.length > 0 && React.createElement(
+              'div',
+              { className: "modal-section" },
+              React.createElement('h5', { className: "modal-section-title" }, "Key Engineering Capabilities"),
+              React.createElement(
+                'ul',
+                { className: "modal-features-list" },
+                project.features.map((feat, i) => React.createElement(
+                  'li',
+                  { key: i, className: "modal-feature-item" },
+                  React.createElement('span', { className: "feature-bullet" }, "◆"),
+                  React.createElement('span', null, feat)
+                ))
+              )
+            ),
+            // Section 3: Technologies
+            React.createElement(
+              'div',
+              { className: "modal-section" },
+              React.createElement('h5', { className: "modal-section-title" }, "Technology & Framework Stack"),
+              React.createElement(
+                'div',
+                { className: "modal-tech-pills" },
+                project.tags.map((tag, i) => React.createElement(
+                  'span',
+                  { key: i, className: "modal-tech-pill" },
+                  tag
+                ))
+              )
+            )
+          ),
+          // Modal Footer Actions
+          React.createElement(
+            'div',
+            { className: "modal-footer" },
+            React.createElement(
+              'div',
+              { className: "modal-actions-left" },
+              project.live && React.createElement(
+                'a',
+                {
+                  href: project.live,
+                  target: "_blank",
+                  rel: "noopener",
+                  className: "modal-btn-primary"
+                },
+                React.createElement('span', null, '🌐'),
+                React.createElement('span', null, 'Open Live Web App ↗')
+              ),
+              project.github && React.createElement(
+                'a',
+                {
+                  href: project.github,
+                  target: "_blank",
+                  rel: "noopener",
+                  className: "modal-btn-secondary"
+                },
+                React.createElement(
+                  'svg',
+                  { width: "17", height: "17", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2" },
+                  React.createElement('path', { d: "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" })
+                ),
+                React.createElement('span', null, 'View GitHub Repo ↗')
+              )
+            ),
+            React.createElement(
+              'button',
+              {
+                type: "button",
+                className: "modal-btn-dismiss",
+                onClick: onClose
+              },
+              "Close"
+            )
+          )
+        )
+      );
+    };
+
+    // Reusable Container: ProjectShowcase
+    const ProjectShowcase = () => {
+      const [activeCategory, setActiveCategory] = useState('all');
+      const [selectedProject, setSelectedProject] = useState(null);
+
+      const filteredProjects = useMemo(() => {
+        if (activeCategory === 'all') return PROJECTS_DATA;
+        return PROJECTS_DATA.filter(p => p.category.includes(activeCategory));
+      }, [activeCategory]);
+
+      return React.createElement(
+        'div',
+        { className: "project-showcase-wrap" },
+        // Category Filter Bar with Framer Motion layoutId pill
+        React.createElement(
+          'div',
+          { className: "filter-bar-react", role: "tablist", "aria-label": "Project Category Filter" },
+          CATEGORIES.map((cat) => {
+            const isActive = activeCategory === cat.id;
+            return React.createElement(
+              'button',
+              {
+                key: cat.id,
+                type: "button",
+                role: "tab",
+                "aria-selected": isActive,
+                className: `filter-btn-react ${isActive ? 'active' : ''}`,
+                onClick: () => setActiveCategory(cat.id)
+              },
+              isActive && React.createElement(motion.div, {
+                layoutId: "activeFilterPill",
+                className: "filter-active-pill",
+                transition: { type: "spring", stiffness: 450, damping: 35 }
+              }),
+              React.createElement('span', { className: "filter-btn-label" }, `${cat.label} (${cat.count})`)
+            );
+          })
+        ),
+        // Animated Grid with Framer Motion AnimatePresence
+        React.createElement(
+          motion.div,
+          { layout: true, className: "projects-grid-react" },
+          React.createElement(
+            AnimatePresence,
+            { mode: "popLayout" },
+            filteredProjects.map((project, idx) => React.createElement(ProjectCard, {
+              key: project.id,
+              project,
+              index: idx,
+              onSelect: setSelectedProject
+            }))
+          )
+        ),
+        // Modal with Framer Motion AnimatePresence
+        React.createElement(
+          AnimatePresence,
+          null,
+          selectedProject && React.createElement(ProjectModal, {
+            project: selectedProject,
+            onClose: () => setSelectedProject(null)
+          })
+        )
+      );
+    };
+
+    // Mount to Root
+    const mountEl = document.getElementById('projects-showcase-root');
+    if (mountEl) {
+      const root = ReactDOM.createRoot(mountEl);
+      root.render(React.createElement(ProjectShowcase));
+      console.log('ProjectShowcase mounted successfully with React & Framer Motion!');
+    }
+  </script>
+
 </body>
 </html>
