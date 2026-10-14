@@ -2558,6 +2558,184 @@
       color: #000000 !important;
     }
 
+  
+    /* =============================================================
+       IN-SECTION INTERACTIVE DETAILS EXPANSION STYLES
+    ============================================================= */
+    .exp-interactive-details-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(245, 158, 11, 0.08));
+      border: 1px solid rgba(245, 158, 11, 0.65);
+      color: #FDE68A;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 0.75rem 1.6rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+      user-select: none;
+    }
+
+    .exp-interactive-details-btn:hover {
+      background: #F59E0B;
+      color: #000000;
+      box-shadow: 0 0 30px rgba(245, 158, 11, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .exp-interactive-details-btn.active {
+      background: rgba(245, 158, 11, 0.3);
+      border-color: #F59E0B;
+      color: #FFFFFF;
+      box-shadow: 0 0 25px rgba(245, 158, 11, 0.35);
+    }
+
+    .exp-chevron-icon {
+      display: inline-block;
+      font-size: 0.82rem;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .exp-interactive-details-btn.active .exp-chevron-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Expandable In-Section Details Container */
+    .exp-expandable-panel {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-12px);
+      transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, transform 0.35s ease, margin-top 0.35s ease;
+      margin-top: 0;
+      pointer-events: none;
+    }
+
+    .exp-expandable-panel.open {
+      max-height: 3500px;
+      opacity: 1;
+      transform: translateY(0);
+      margin-top: 1.75rem;
+      pointer-events: auto;
+    }
+
+    .exp-details-card-inner {
+      background: rgba(8, 8, 12, 0.85);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.1);
+    }
+
+    /* Pipeline Step Strip */
+    .exp-pipeline-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.65rem;
+      margin: 1.25rem 0;
+    }
+
+    .pipeline-step-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 0.75rem;
+      transition: all 0.2s ease;
+    }
+
+    .pipeline-step-box:hover {
+      background: rgba(245, 158, 11, 0.08);
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+
+    .pipeline-step-num {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: #F59E0B;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .pipeline-step-title {
+      font-size: 0.82rem;
+      color: #F8FAFC;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .pipeline-step-desc {
+      font-size: 0.74rem;
+      color: #94A3B8;
+      margin-top: 0.25rem;
+      line-height: 1.4;
+    }
+
+    .exp-solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+
+    .exp-solution-card {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid #F59E0B;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 0 10px 10px 0;
+      padding: 1rem;
+    }
+
+    .exp-solution-title {
+      font-size: 0.9rem;
+      color: #F8FAFC;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .exp-solution-desc {
+      font-size: 0.8rem;
+      color: #94A3B8;
+      line-height: 1.5;
+    }
+
+    .exp-solution-why {
+      font-size: 0.76rem;
+      color: #FDE68A;
+      margin-top: 0.45rem;
+      line-height: 1.45;
+      background: rgba(245, 158, 11, 0.08);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    .exp-collapse-bottom-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #CBD5E1;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .exp-collapse-bottom-btn:hover {
+      background: rgba(245, 158, 11, 0.2);
+      border-color: #F59E0B;
+      color: #FFF;
+    }
+
   </style>
   <!-- ESM Importmap for React 18 & Framer Motion -->
   <script type="importmap">
@@ -2896,39 +3074,8 @@
               </p>
             </div>
 
-            <!-- Interactive 4-Month Progression Tabs -->
-            <div class="exp-timeline-container">
-              <div class="exp-timeline-header">
-                <span class="exp-timeline-label">INTERNSHIP MILESTONE PROGRESSION (CLICK MONTH TO EXPLORE):</span>
-              </div>
-              
-              <div class="exp-month-tabs" id="expMonthTabs">
-                <button type="button" class="exp-tab-btn active" onclick="selectExpMonth(1)">
-                  <span class="exp-tab-num">01</span>
-                  <span class="exp-tab-title">July 2026: Big Data Architecture</span>
-                </button>
-                <button type="button" class="exp-tab-btn" onclick="selectExpMonth(2)">
-                  <span class="exp-tab-num">02</span>
-                  <span class="exp-tab-title">August 2026: Leak-Free Validation</span>
-                </button>
-                <button type="button" class="exp-tab-btn" onclick="selectExpMonth(3)">
-                  <span class="exp-tab-num">03</span>
-                  <span class="exp-tab-title">September 2026: Calibrated Ranker</span>
-                </button>
-                <button type="button" class="exp-tab-btn" onclick="selectExpMonth(4)">
-                  <span class="exp-tab-num">04</span>
-                  <span class="exp-tab-title">October 2026: Benchmarks & Paper</span>
-                </button>
-              </div>
-
-              <!-- Month Detail Display Cards (Dynamically Switchable) -->
-              <div class="exp-tab-content-box" id="expTabContent">
-                <!-- Injected via JavaScript for instant responsiveness -->
-              </div>
-            </div>
-
             <!-- Key Verifiable Metrics Bento Row -->
-            <div class="flagship-specs" style="margin-top: 1.5rem;">
+            <div class="flagship-specs">
               <div class="spec-item" title="78,829,314 Search Console query rows streamed via DuckDB without RAM exhaustion">
                 <span class="spec-val">78.8M Rows</span>
                 <span class="spec-label">Out-of-Core Big Data</span>
@@ -2951,10 +3098,11 @@
               </div>
             </div>
 
-            <!-- Primary Action Buttons Row -->
+            <!-- Primary Action Buttons Row with Interactive Section Details Toggle -->
             <div class="exp-action-row">
-              <button type="button" class="btn-solid" style="background: #F59E0B; color: #000; font-weight: 700;" onclick="openExpModal()">
-                <span>View Full Internship Details & Architecture 🔍</span>
+              <button type="button" class="exp-interactive-details-btn" id="expDetailsToggleBtn" onclick="toggleExpSectionDetails()" aria-expanded="false" aria-controls="expDetailsPanel">
+                <span id="expDetailsBtnText">Explore Full Internship Details & Architecture</span>
+                <span class="exp-chevron-icon">▼</span>
               </button>
               <a href="https://internship.flyrank.ai/verify?id=FR-D1-T668H-R789R&first_name=Fardin" target="_blank" rel="noopener" class="btn-ghost">
                 <span>Verify Credential ↗</span>
@@ -2965,6 +3113,144 @@
               <a href="https://github.com/fardinhossain/FlyRankAI-ML-Internship-Task" target="_blank" rel="noopener" class="btn-ghost">
                 <span>GitHub Benchmark Repo ↗</span>
               </a>
+            </div>
+
+            <!-- IN-SECTION EXPANDABLE DETAILS PANEL (Revealed after clicking button) -->
+            <div class="exp-expandable-panel" id="expDetailsPanel" aria-hidden="true">
+              <div class="exp-details-card-inner">
+                
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding-bottom: 0.75rem;">
+                  <div>
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #F59E0B; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">
+                      // DEEP-DIVE TECHNICAL BREAKDOWN
+                    </span>
+                    <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: #F8FAFC; margin-top: 0.2rem;">
+                      FlyRank AI ML Systems Architecture
+                    </h3>
+                  </div>
+                  <button type="button" class="exp-collapse-bottom-btn" style="margin-top: 0;" onclick="toggleExpSectionDetails()">
+                    <span>Close Details ▲</span>
+                  </button>
+                </div>
+
+                <!-- 1. End-to-End Pipeline Visualization -->
+                <div style="margin-bottom: 1.5rem;">
+                  <div style="font-size: 0.85rem; font-weight: 700; color: #E2E8F0; margin-bottom: 0.6rem;">
+                    ⚙️ End-to-End Pipeline Architecture:
+                  </div>
+                  <div class="exp-pipeline-strip">
+                    <div class="pipeline-step-box">
+                      <div class="pipeline-step-num">STEP 01</div>
+                      <div class="pipeline-step-title">78.8M Log Ingestion</div>
+                      <div class="pipeline-step-desc">Chunk-based parquet cursor in DuckDB</div>
+                    </div>
+                    <div class="pipeline-step-box">
+                      <div class="pipeline-step-num">STEP 02</div>
+                      <div class="pipeline-step-title">Out-of-Core Stream</div>
+                      <div class="pipeline-step-desc">Peak resident RAM capped &lt; 1.3 GB</div>
+                    </div>
+                    <div class="pipeline-step-box">
+                      <div class="pipeline-step-num">STEP 03</div>
+                      <div class="pipeline-step-title">GroupKFold Split</div>
+                      <div class="pipeline-step-desc">Zero leakage on repeated queries</div>
+                    </div>
+                    <div class="pipeline-step-box">
+                      <div class="pipeline-step-num">STEP 04</div>
+                      <div class="pipeline-step-title">LightGBM Ranker</div>
+                      <div class="pipeline-step-desc">Focal loss GBDT achieving 0.932 AUC</div>
+                    </div>
+                    <div class="pipeline-step-box">
+                      <div class="pipeline-step-num">STEP 05</div>
+                      <div class="pipeline-step-title">Isotonic Calibration</div>
+                      <div class="pipeline-step-desc">Brier loss 0.043 matching real CTR</div>
+                    </div>
+                    <div class="pipeline-step-box">
+                      <div class="pipeline-step-num">STEP 06</div>
+                      <div class="pipeline-step-title">Sub-ms Serving</div>
+                      <div class="pipeline-step-desc">0.042 ms per query inference latency</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Interactive 4-Month Progression Tabs -->
+                <div class="exp-timeline-container">
+                  <div class="exp-timeline-header">
+                    <span class="exp-timeline-label">4-MONTH INTERNSHIP MILESTONE PROGRESSION (CLICK MONTH TO EXPLORE):</span>
+                  </div>
+                  
+                  <div class="exp-month-tabs" id="expMonthTabs">
+                    <button type="button" class="exp-tab-btn active" onclick="selectExpMonth(1)">
+                      <span class="exp-tab-num">01</span>
+                      <span class="exp-tab-title">July 2026: Big Data Architecture</span>
+                    </button>
+                    <button type="button" class="exp-tab-btn" onclick="selectExpMonth(2)">
+                      <span class="exp-tab-num">02</span>
+                      <span class="exp-tab-title">August 2026: Leak-Free Validation</span>
+                    </button>
+                    <button type="button" class="exp-tab-btn" onclick="selectExpMonth(3)">
+                      <span class="exp-tab-num">03</span>
+                      <span class="exp-tab-title">September 2026: Calibrated Ranker</span>
+                    </button>
+                    <button type="button" class="exp-tab-btn" onclick="selectExpMonth(4)">
+                      <span class="exp-tab-num">04</span>
+                      <span class="exp-tab-title">October 2026: Benchmarks & Paper</span>
+                    </button>
+                  </div>
+
+                  <!-- Month Detail Display Cards (Dynamically Switchable) -->
+                  <div class="exp-tab-content-box" id="expTabContent">
+                    <!-- Injected via JavaScript for instant responsiveness -->
+                  </div>
+                </div>
+
+                <!-- 3. The 3 Core Engineering Solutions Explained -->
+                <div style="margin-top: 1.5rem;">
+                  <div style="font-size: 0.85rem; font-weight: 700; color: #E2E8F0; margin-bottom: 0.6rem;">
+                    💡 3 Core Production Challenges Solved:
+                  </div>
+                  <div class="exp-solutions-grid">
+                    
+                    <div class="exp-solution-card">
+                      <div class="exp-solution-title">1. Out-of-Core DuckDB Streaming</div>
+                      <div class="exp-solution-desc">
+                        Processed 78,829,314 Google Search Console rows via chunk-based parquet cursors with memory capped under 1.3 GB RAM.
+                      </div>
+                      <div class="exp-solution-why">
+                        <strong>Why it matters:</strong> Prevents out-of-memory crashes, allowing enterprise big data triage on standard servers without expensive multi-gigabyte RAM clusters.
+                      </div>
+                    </div>
+
+                    <div class="exp-solution-card">
+                      <div class="exp-solution-title">2. Leak-Free GroupKFold Cross-Validation</div>
+                      <div class="exp-solution-desc">
+                        Isolated query clusters into distinct folds so test sets strictly evaluate the model on completely unseen search terms.
+                      </div>
+                      <div class="exp-solution-why">
+                        <strong>Why it matters:</strong> Standard splits let models "cheat" by memorizing frequent queries. GroupKFold proves genuine generalization in the real world (0.932 AUC).
+                      </div>
+                    </div>
+
+                    <div class="exp-solution-card">
+                      <div class="exp-solution-title">3. Probability Calibration (Brier 0.043)</div>
+                      <div class="exp-solution-desc">
+                        Calibrated LightGBM predictions using isotonic regression, reducing Brier probability score error to 0.043.
+                      </div>
+                      <div class="exp-solution-why">
+                        <strong>Why it matters:</strong> Eliminates false overconfidence; predicted 80% click likelihoods genuinely match empirical real-world user click behavior.
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Bottom Collapse Button -->
+                <div style="text-align: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                  <button type="button" class="exp-collapse-bottom-btn" onclick="toggleExpSectionDetails()">
+                    <span>▲ Collapse Experience Details</span>
+                  </button>
+                </div>
+
+              </div>
             </div>
 
           </div>
@@ -4071,6 +4357,49 @@
         `;
       }
     }
+
+    
+    // In-Section Experience Details Expand/Collapse Logic
+    function toggleExpSectionDetails() {
+      const panel = document.getElementById('expDetailsPanel');
+      const btn = document.getElementById('expDetailsToggleBtn');
+      const btnText = document.getElementById('expDetailsBtnText');
+      if (!panel || !btn) return;
+
+      const isOpen = panel.classList.contains('open');
+      if (isOpen) {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        btn.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+        if (btnText) btnText.textContent = 'Explore Full Internship Details & Architecture';
+        
+        // Smoothly scroll back to experience header
+        const expSec = document.getElementById('experience');
+        if (expSec) {
+          const navHeight = document.querySelector('.top-nav')?.offsetHeight || 75;
+          const targetPos = expSec.getBoundingClientRect().top + window.pageYOffset - (navHeight + 10);
+          window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        }
+      } else {
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden', 'false');
+        btn.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+        if (btnText) btnText.textContent = 'Hide Internship Details';
+        
+        // Initialize Month 1 tab if not already initialized
+        selectExpMonth(1);
+
+        // Smooth scroll to reveal the details panel cleanly
+        setTimeout(() => {
+          const navHeight = document.querySelector('.top-nav')?.offsetHeight || 75;
+          const panelPos = panel.getBoundingClientRect().top + window.pageYOffset - (navHeight + 20);
+          window.scrollTo({ top: panelPos, behavior: 'smooth' });
+        }, 150);
+      }
+    }
+
 
     function openExpModal() {
       const modal = document.getElementById('expModalBackdrop');
