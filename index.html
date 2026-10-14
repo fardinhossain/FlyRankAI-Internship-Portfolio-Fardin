@@ -643,7 +643,7 @@
 
     @media (min-width: 900px) {
       .profile-card-inner {
-        grid-template-columns: 340px 1fr;
+        grid-template-columns: 220px 1fr;
         padding: 3.5rem;
         gap: 3.5rem;
       }
@@ -657,23 +657,102 @@
       gap: 1.25rem;
     }
 
-    .profile-photo-wrap {
+        .profile-photo-wrap {
       position: relative;
-      width: clamp(200px, 60vw, 260px);
-      height: clamp(200px, 60vw, 260px);
-      border-radius: 28px;
-      padding: 5px;
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.7) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(56, 189, 248, 0.4) 100%);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 158, 11, 0.2);
+      width: 140px;
+      height: 140px;
+      border-radius: 20px;
+      padding: 3.5px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.75) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(56, 189, 248, 0.4) 100%);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 158, 11, 0.2);
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    .profile-photo-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 16.5px;
+      overflow: hidden;
+      background: #000000;
     }
 
     .profile-photo-img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 16.5px;
+      opacity: 0;
+      transform: scale(1.04);
+      transition: opacity 1.4s cubic-bezier(0.25, 1, 0.5, 1), transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: opacity, transform;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Active image: completely opaque on top */
+    .profile-photo-img.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 3;
+      pointer-events: auto;
+    }
+
+    /* Outgoing image: held at opacity 1 on layer below so black void never bleeds through */
+    .profile-photo-img.prev-active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 2;
+    }
+
+    .profile-photo-img.photo-real {
       object-position: center 15%;
-      border-radius: 23px;
-      background: #000;
+    }
+
+    .profile-photo-img.photo-cyber {
+      object-position: center center;
+    }
+
+    /* Floating telemetry indicators for profile images */
+    .profile-photo-indicators {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      z-index: 10;
+    }
+
+    .photo-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.35);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .photo-dot:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .photo-dot.active {
+      width: 14px;
+      background: #F59E0B;
+      box-shadow: 0 0 8px rgba(245, 158, 11, 0.9);
     }
 
     .profile-status-badge {
@@ -1607,8 +1686,15 @@
             
             <!-- Left: Photo & Socials & Previous Portfolio Link -->
             <div class="profile-left-col">
-              <div class="profile-photo-wrap">
-                <img src="fardin_profile.jpg" alt="Md. Fardin Hossain" class="profile-photo-img" />
+              <div class="profile-photo-wrap" id="profilePhotoWrap" title="Md. Fardin Hossain">
+                <div class="profile-photo-inner">
+                  <img src="fardin_profile.jpg" alt="Md. Fardin Hossain (Portrait)" class="profile-photo-img photo-real active" id="profileSlide0" />
+                  <img src="fardin_cyber.jpg" alt="Md. Fardin Hossain (Cybernetic AI)" class="profile-photo-img photo-cyber" id="profileSlide1" />
+                </div>
+                <div class="profile-photo-indicators" aria-label="Photo carousel controls">
+                  <button type="button" class="photo-dot active" data-index="0" aria-label="View Real Portrait"></button>
+                  <button type="button" class="photo-dot" data-index="1" aria-label="View Cybernetic Portrait"></button>
+                </div>
               </div>
 
               <div class="profile-status-badge">
@@ -2359,6 +2445,84 @@
     }
 
     runTriageSim();
+
+    // 4. Auto-Switching Profile Picture Animation (Cycles smoothly every 3 seconds)
+    (function initProfileCarousel() {
+      const wrap = document.getElementById('profilePhotoWrap');
+      if (!wrap) return;
+      const slides = Array.from(wrap.querySelectorAll('.profile-photo-img'));
+      const dots = Array.from(wrap.querySelectorAll('.photo-dot'));
+      if (slides.length < 2) return;
+
+      let currentIdx = 0;
+      let cycleTimer = null;
+      let cleanPrevTimeout = null;
+
+      function goToSlide(nextIdx) {
+        if (nextIdx === currentIdx) return;
+        
+        const prevSlide = slides[currentIdx];
+        const nextSlide = slides[nextIdx];
+        
+        // 1. Mark previous slide as holding underneath
+        prevSlide.classList.remove('active');
+        prevSlide.classList.add('prev-active');
+        
+        // 2. Next slide smoothly fades & zooms in on top (z-index: 3)
+        nextSlide.classList.remove('prev-active');
+        void nextSlide.offsetWidth; // Force reflow to commit transition
+        nextSlide.classList.add('active');
+
+        // 3. Update indicator dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === nextIdx);
+        });
+
+        // 4. Clean up prev-active class after transition finishes (1.4s)
+        if (cleanPrevTimeout) clearTimeout(cleanPrevTimeout);
+        cleanPrevTimeout = setTimeout(() => {
+          slides.forEach((s, i) => {
+            if (i !== nextIdx) {
+              s.classList.remove('prev-active', 'active');
+            }
+          });
+        }, 1450);
+
+        currentIdx = nextIdx;
+      }
+
+      function nextSlide() {
+        const next = (currentIdx + 1) % slides.length;
+        goToSlide(next);
+      }
+
+      function startTimer() {
+        stopTimer();
+        cycleTimer = setInterval(nextSlide, 3000);
+      }
+
+      function stopTimer() {
+        if (cycleTimer) {
+          clearInterval(cycleTimer);
+          cycleTimer = null;
+        }
+      }
+
+      dots.forEach((dot) => {
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const targetIdx = parseInt(dot.getAttribute('data-index') || '0', 10);
+          goToSlide(targetIdx);
+          startTimer();
+        });
+      });
+
+      // Pause on hover, resume when cursor leaves
+      wrap.addEventListener('mouseenter', stopTimer);
+      wrap.addEventListener('mouseleave', startTimer);
+
+      startTimer();
+    })();
   </script>
 </body>
 </html>
