@@ -151,15 +151,18 @@
        TOP NAVIGATION BAR (WITH PAPER PDF LINK)
     -------------------------------------------------------------- */
     .top-nav {
-      position: relative;
-      z-index: 30;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 1.25rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      background: rgba(4, 4, 7, 0.7);
-      backdrop-filter: blur(16px);
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(4, 4, 7, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: background 0.25s ease, border-color 0.25s ease;
     }
 
     @media (min-width: 768px) {
@@ -2340,6 +2343,219 @@
       }
     }
 
+  
+    /* =============================================================
+       MOBILE 3-BAR HAMBURGER & INTERACTIVE NAVIGATION DRAWER
+    ============================================================= */
+    .nav-hamburger-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.25s ease;
+      user-select: none;
+    }
+
+    .nav-hamburger-btn:hover {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: rgba(245, 158, 11, 0.45);
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.2);
+    }
+
+    .hamburger-bar {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background: #F8FAFC;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, background-color 0.2s ease;
+    }
+
+    /* Animated 3-bar Cross State when Active */
+    .nav-hamburger-btn.active .hamburger-bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+      background: #F59E0B;
+    }
+
+    .nav-hamburger-btn.active .hamburger-bar:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-6px);
+    }
+
+    .nav-hamburger-btn.active .hamburger-bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+      background: #F59E0B;
+    }
+
+    @media (max-width: 959px) {
+      .nav-hamburger-btn {
+        display: flex;
+      }
+    }
+
+    .mobile-nav-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 90;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .mobile-nav-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      z-index: 95;
+      background: rgba(8, 8, 12, 0.96);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(245, 158, 11, 0.12);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    }
+
+    .mobile-nav-drawer.open {
+      max-height: 85vh;
+      overflow-y: auto;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-nav-inner {
+      padding: 1.25rem 1.25rem 1.75rem;
+    }
+
+    .mobile-nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0.75rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-nav-title {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: #94A3B8;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .mobile-nav-close-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #CBD5E1;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-nav-close-btn:hover {
+      background: #F59E0B;
+      color: #000;
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .mobile-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #E2E8F0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.2s ease;
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link:active {
+      background: rgba(245, 158, 11, 0.12);
+      border-color: rgba(245, 158, 11, 0.4);
+      color: #F8FAFC;
+      transform: translateX(3px);
+    }
+
+    .mobile-nav-icon {
+      font-size: 1.1rem;
+    }
+
+    .mobile-nav-badge {
+      margin-left: auto;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #F59E0B;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      padding: 0.15rem 0.5rem;
+      border-radius: 9999px;
+    }
+
+    .mobile-nav-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 0.4rem 0;
+    }
+
+    .mobile-nav-special {
+      border-color: rgba(245, 158, 11, 0.35);
+      color: #FDE68A;
+    }
+
+    .mobile-nav-contact {
+      background: #FFFFFF;
+      color: #000000 !important;
+      font-weight: 700;
+      border: none;
+      margin-top: 0.25rem;
+    }
+
+    .mobile-nav-contact:hover {
+      background: #F59E0B;
+      color: #000000 !important;
+    }
+
   </style>
   <!-- ESM Importmap for React 18 & Framer Motion -->
   <script type="importmap">
@@ -2362,11 +2578,12 @@
     <canvas id="neural-canvas"></canvas>
 
     <!-- 1. TOP NAVIGATION WITH PAPER PDF LINK -->
-    <header class="top-nav">
+    <header class="top-nav" id="topNav">
       <a href="#home" class="nav-brand">
         <span class="nav-brand-logo">fardin<span class="nav-brand-dot">.</span>ai</span>
       </a>
 
+      <!-- Desktop Navigation Links -->
       <ul class="nav-links">
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About Me</a></li>
@@ -2377,13 +2594,82 @@
       </ul>
 
       <div class="nav-actions">
-        
         <a href="mailto:fardin.hosn@gmail.com" class="nav-cta-btn">
           <span>Contact</span>
           <span>↗</span>
         </a>
+
+        <!-- Small 3-Bar Hamburger Button for Mobile Access -->
+        <button type="button" class="nav-hamburger-btn" id="navHamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" onclick="toggleMobileNav()">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </header>
+
+    <!-- Mobile Navigation Drawer Menu -->
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <div class="mobile-nav-header">
+          <span class="mobile-nav-title">Menu Navigation</span>
+          <button type="button" class="mobile-nav-close-btn" onclick="closeMobileNav()" aria-label="Close menu">✕</button>
+        </div>
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="#home" class="mobile-nav-link" onclick="closeMobileNav()">
+              <span class="mobile-nav-icon">🏠</span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="mobile-nav-link" onclick="closeMobileNav()">
+              <span class="mobile-nav-icon">👤</span>
+              <span>About Me</span>
+            </a>
+          </li>
+          <li>
+            <a href="#experience" class="mobile-nav-link" onclick="closeMobileNav()">
+              <span class="mobile-nav-icon">💼</span>
+              <span>Experience (FlyRank AI)</span>
+              <span class="mobile-nav-badge">4mo</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="mobile-nav-link" onclick="closeMobileNav()">
+              <span class="mobile-nav-icon">🚀</span>
+              <span>All Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#interactive-triage" class="mobile-nav-link" onclick="closeMobileNav()">
+              <span class="mobile-nav-icon">⚡</span>
+              <span>Telemetry Simulator</span>
+            </a>
+          </li>
+          <li>
+            <a href="#credentials" class="mobile-nav-link" onclick="closeMobileNav()">
+              <span class="mobile-nav-icon">🛡️</span>
+              <span>Credentials & Certs</span>
+            </a>
+          </li>
+          <li class="mobile-nav-divider"></li>
+          <li>
+            <a href="paper.pdf" target="_blank" class="mobile-nav-link mobile-nav-special" onclick="closeMobileNav()">
+              <span class="mobile-nav-icon">📄</span>
+              <span>Technical Paper PDF ↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:fardin.hosn@gmail.com" class="mobile-nav-link mobile-nav-contact" onclick="closeMobileNav()">
+              <span class="mobile-nav-icon">✉️</span>
+              <span>Contact (fardin.hosn@gmail.com) ↗</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <!-- 2. HERO: ROBOT CENTERPIECE (NO BROWN SHADING) + INTERACTIVE LIGHTING HOVER + FLYRANKAI ML INTERNSHIP -->
     <section class="hero-stage" id="home">
@@ -3821,6 +4107,73 @@
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
       setTimeout(() => selectExpMonth(1), 100);
     }
+  </script>
+
+
+  <script>
+    // Mobile Navigation Drawer Toggle Logic
+    function toggleMobileNav() {
+      const drawer = document.getElementById('mobileNavDrawer');
+      const backdrop = document.getElementById('mobileNavBackdrop');
+      const btn = document.getElementById('navHamburgerBtn');
+      if (!drawer || !backdrop || !btn) return;
+      const isOpen = drawer.classList.contains('open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        drawer.classList.add('open');
+        backdrop.classList.add('open');
+        btn.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileNav() {
+      const drawer = document.getElementById('mobileNavDrawer');
+      const backdrop = document.getElementById('mobileNavBackdrop');
+      const btn = document.getElementById('navHamburgerBtn');
+      if (drawer) {
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+      if (backdrop) backdrop.classList.remove('open');
+      if (btn) {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      document.body.style.overflow = '';
+    }
+
+    // Escape Key Listener to Close Nav
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMobileNav();
+      }
+    });
+
+    // Precision Smooth Scrolling for all internal anchor links (#)
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (!targetId || targetId === '#' || targetId.startsWith('#!')) return;
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            closeMobileNav();
+            const navHeight = document.querySelector('.top-nav')?.offsetHeight || 75;
+            const targetPos = targetEl.getBoundingClientRect().top + window.pageYOffset - (navHeight + 10);
+            window.scrollTo({
+              top: targetPos,
+              behavior: 'smooth'
+            });
+            history.pushState(null, null, targetId);
+          }
+        });
+      });
+    });
   </script>
 
 </body>
