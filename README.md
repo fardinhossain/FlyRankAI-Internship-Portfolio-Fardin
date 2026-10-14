@@ -1,127 +1,132 @@
-# FlyRankAI-Internship-Portfolio-Fardin
+# 🌐 fardin.ai — AI/ML Systems & Portfolio
 
-Welcome to the official **General AI Fluency & Portfolio Engineering Track Repository** for **Fardin Hossain** at **FlyRank AI**.
+<div align="center">
 
-* **Live Personal Portfolio:** [https://flyrankai-ml-internship-task.vercel.app](https://flyrankai-ml-internship-task.vercel.app)
-* **Candidate:** Fardin Hossain (Machine Learning & AI Engineering Intern)
-* **Credential Badge:** [FlyRank AI Verified Graduate](https://internship-badge.netlify.app/)
-* **Contact & Inquiries:** [iamfardin.swe@gmail.com](mailto:iamfardin.swe@gmail.com)
+  <img src="assets/images/fardin_cyber.jpg" alt="Md. Fardin Hossain - AI Systems Engineer" width="130" style="border-radius: 50%; border: 2px solid #F59E0B; box-shadow: 0 0 25px rgba(245, 158, 11, 0.35);" />
+
+  <h3><strong>Md. Fardin Hossain</strong></h3>
+  <p><em>AI & Machine Learning Systems Engineer • Full-Stack Software Engineer</em></p>
+
+  <p>
+    <a href="https://flyrankai-ml-internship-task.vercel.app"><img src="https://img.shields.io/badge/Live_Portfolio-fardin.ai-F59E0B?style=for-the-badge&logo=vercel&logoColor=black" alt="Live Portfolio" /></a>
+    <a href="https://internship.flyrank.ai/verify?id=FR-D1-T668H-R789R&first_name=Fardin"><img src="https://img.shields.io/badge/FlyRank_Verified-FR--D1--T668H--R789R-10B981?style=for-the-badge&logo=checkmarx&logoColor=white" alt="Verified Credential" /></a>
+    <a href="paper.pdf"><img src="https://img.shields.io/badge/Research_Paper-PDF_Document-EF4444?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Paper PDF" /></a>
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/DuckDB-78.8M_Rows_Streaming-FFF000?style=flat-square&logo=duckdb&logoColor=black" alt="DuckDB" />
+    <img src="https://img.shields.io/badge/LightGBM-0.932_AUC_Ranker-02569B?style=flat-square&logo=google&logoColor=white" alt="LightGBM" />
+    <img src="https://img.shields.io/badge/Validation-GroupKFold_Leak--Free-8B5CF6?style=flat-square" alt="GroupKFold" />
+    <img src="https://img.shields.io/badge/Calibration-0.043_Brier_Loss-EC4899?style=flat-square" alt="Brier Loss" />
+    <img src="https://img.shields.io/badge/PyTorch_CV-98.7%25_Test_Acc-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
+    <img src="https://img.shields.io/badge/License-MIT-3B82F6?style=flat-square" alt="License" />
+  </p>
+
+</div>
 
 ---
 
-## Repository Architecture
+## 📌 Executive Summary
 
-This repository holds all course deliverables, engineering briefs, automated agent scripts, visual verification captures, and the live portfolio site. All documentation deliverables (both Word `.docx` reports and Markdown `.md` source documents) and related visual assets are structured by week inside the [`doc/`](doc/) directory:
+This repository hosts the production codebase for **[fardin.ai](https://flyrankai-ml-internship-task.vercel.app)**, the interactive AI systems and machine learning engineering portfolio of **Md. Fardin Hossain**. 
+
+Anchored by a **4-month industrial Machine Learning Engineering Internship at FlyRank AI (July – October 2026)**, the portfolio demonstrates scalable tabular ranking pipelines across **78.8 million Google Search Console records**, deep learning diagnostic vision classifiers (**98.7% test accuracy**), and production full-stack platforms.
+
+---
+
+## 💼 Flagship Experience: FlyRank AI ML Internship
+
+* **Role:** Machine Learning Engineer Intern
+* **Organization:** FlyRank AI (Remote / San Francisco, CA)
+* **Tenure:** July 2026 – October 2026 (4 Months)
+* **Cryptographic Credential ID:** `FR-D1-T668H-R789R` — [Verify Official Credential ↗](https://internship.flyrank.ai/verify?id=FR-D1-T668H-R789R&first_name=Fardin)
+* **Peer Technical Paper:** [`paper.pdf`](paper.pdf)
+
+### ⚡ Core Engineering Breakthroughs
+
+| Technical Challenge | Engineering Solution | Why It Matters (Production Value) |
+| :--- | :--- | :--- |
+| **Out-Of-Memory (OOM) at Scale** | Chunk-based DuckDB parquet streaming over **78,829,314 rows** | Traditional memory-bound pipelines crash when processing 78M query rows. DuckDB streaming capped resident RAM strictly **under 1.3 GB**, running big data search triage on standard commodity compute without expensive clusters. |
+| **Evaluation Test Contamination** | Domain-stratified **GroupKFold** cross-validation | In search telemetry, identical queries appear thousands of times. Random splits leak queries between train/test, artificially inflating accuracy. GroupKFold isolates queries to test strictly on **unseen domains**, guaranteeing real-world reliability (**0.932 AUC**). |
+| **Overconfident Predictions** | Isotonic probability calibration minimizing **Brier Loss to 0.043** | Uncalibrated models produce misleading 90%+ confidence scores. Minimizing Brier score aligns model probabilities with true user click rates (an 80% score genuinely reflects an 80% real-world click rate). |
+| **Production Serving Throughput** | Sub-millisecond C++ LightGBM runtime inference | Delivers **0.042 ms per query inference latency**, allowing real-time search triage directly within high-throughput Google Search Console ingestion loops. |
+
+### 🛠️ Telemetry Pipeline Dataflow
+
+```mermaid
+graph LR
+    A["78.8M Search Console Logs"] --> B["DuckDB Chunk Cursor"]
+    B --> C["Parquet Out-of-Core Stream (< 1.3 GB RAM)"]
+    C --> D["GroupKFold Domain Split (Zero Leakage)"]
+    D --> E["LightGBM GBDT Ranker (0.932 AUC)"]
+    E --> F["Isotonic Calibration (0.043 Brier Loss)"]
+    F --> G["Sub-Millisecond Serving (0.042 ms/query)"]
+```
+
+---
+
+## 🚀 All Open-Source Deployed Projects
+
+| Project | Category | Highlights & Technologies | Live Application | Repository |
+| :--- | :--- | :--- | :---: | :---: |
+| **Civic-Pulse AI** | AI / Web | AI municipal infrastructure reporting, visual anomaly detection, automated priority triage. *FastAPI, React, PyTorch, Leaflet, PostgreSQL.* | [Live Demo ↗](https://github.com/fardinhossain/Civic-Pulse_AI_API_Hackathon_2026) | [GitHub ↗](https://github.com/fardinhossain/Civic-Pulse_AI_API_Hackathon_2026) |
+| **LocationKhuji** | AI / NLP | AI-powered natural language location search engine with contextual intent parsing. *React, Node.js, NLP Geocoding, MongoDB.* | [Live Demo ↗](https://locationkhuji.netlify.app/) | [GitHub ↗](https://github.com/fardinhossain/LocationKhuji) |
+| **SchedOS** | Systems | Interactive OS CPU scheduling simulator with Gantt charts, turnaround analytics, and visual queues. *TypeScript, React, Tailwind, Canvas.* | [Live Demo ↗](https://schedos.netlify.app/) | [GitHub ↗](https://github.com/fardinhossain/SchedOS) |
+| **SEU Routine Maker** | Web / Tool | Automated university course timetable conflict resolver with PDF/Excel export. *React, TypeScript, Lucide, Tailwind.* | [Live Demo ↗](https://routinemaker.netlify.app/) | [GitHub ↗](https://github.com/fardinhossain/SEU-Routine-Maker) |
+| **GainTheBrain** | Full-Stack | Cognitive enhancement and micro-learning platform with spaced repetition and streaks. *React, Node.js, Express, Tailwind.* | [Live Demo ↗](https://gainthebrain.netlify.app/) | [GitHub ↗](https://github.com/fardinhossain/GainTheBrain) |
+| **Skin Disease CV** | Deep Learning | Diagnostic computer vision transfer learning classifier (**98.7% test accuracy**). *PyTorch, MobileNetV2, GoogLeNet, Flask.* | — | [GitHub ↗](https://github.com/fardinhossain/skin-disease-classification) |
+| **CrisisDeskAI** | AI / Backend | Disaster relief operational coordination API with automated NLP emergency routing. *FastAPI, Pydantic, WebSockets, Redis.* | — | [GitHub ↗](https://github.com/fardinhossain/crisisdesk-ai-backend) |
+| **UniBuddy App** | Mobile / Web | Campus companion assistant for student schedules, academic tasks, and announcements. *React Native, Expo, Firebase.* | — | [GitHub ↗](https://github.com/fardinhossain/UniBuddy) |
+| **3D Robotics Lab** | Graphics | Browser-based 3D educational robotics simulation with interactive kinematic joints. *Three.js, WebGL, HTML5 Canvas.* | — | [GitHub ↗](https://github.com/fardinhossain/3d-robotics-classroom-lab) |
+| **CPTE Penetration Audit** | Security | Enterprise vulnerability assessment and offensive security auditing under CPTE methodology. *Kali Linux, Metasploit, Nmap, Wireshark.* | [Certification ↗](https://github.com/fardinhossain/FlyRankAI-Internship-Portfolio-Fardin#credentials) | [GitHub ↗](https://github.com/fardinhossain/cybersecurity-assessment-project) |
+
+---
+
+## 📂 Repository Layout
 
 ```text
 FlyRankAI-Internship-Portfolio-Fardin/
-├── doc/
-│   ├── Week-01/          # AI Surface Mapping, Sitemaps, Tool Audit & Sitemap Diagram
-│   ├── Week-02/          # Prompt Engineering, Prompt Ladder, Cases & Tutorial/Eval Screenshots
-│   ├── Week-03/          # Visual Identity Kit, Wordmark/Favicon Assets, Real Captures & Flow
-│   ├── Week-04/          # Stack Selection, Empty Live Deploy, MCP Workflows & Live Browser Captures
-│   ├── Week-05/          # DNS/Live Hub, Agent Specs & MVP Build Logs
-│   ├── Week-06/          # Interactive Calculator, Mobile QA & Design Review
-│   ├── Week-07/          # Adversarial QA/SEO, Domain Launch Hygiene & Social Share Cards
-│   ├── Week-08/          # Agent Video Docs, Final Showcase & Continuity Plan
-│   ├── Capstone/         # Option A: General AI Fluency Impact Project
-│   └── Guides/           # Master Track Guide & Verification Checklists
-├── index.html            # Production Portfolio Web App (Vanilla HTML/CSS/JS)
-├── st_scout_agent.py     # Executable Autonomous Scouting Agent (CLI)
-├── favicon.svg           # Custom Monogram Identity Favicon
-├── logo.svg              # Brand Monogram Logo
-├── vercel.json           # Edge Caching & Routing Config
-└── README.md             # Repository Master Index
+├── assets/
+│   ├── branding/           # Vector wordmarks, favicon.svg, and icon assets
+│   └── images/             # Portrait photography and transparent robot hero centerpiece
+├── .gitignore              # Git ignore configuration (excluding local coursework & skills)
+├── index.html              # Interactive portfolio single-page application (React 18 + Framer Motion)
+├── LICENSE                 # MIT Open-Source License
+├── paper.pdf               # FlyRank AI industrial benchmark research whitepaper
+├── README.md               # Repository documentation and systems showcase
+└── vercel.json             # Edge deployment configuration
 ```
 
 ---
 
-## Weekly Curriculum & Deliverables Index
+## 💻 Local Development & Quickstart
 
-All files can be accessed directly through the weekly folders below:
+Clone and run the portfolio locally in seconds using Python's built-in HTTP server or any modern static server:
 
-### [Week 01: Foundations & Framing](doc/Week-01/)
-* **FL-01:** AI Workflow Audit and Tool Setup — [`AI Workflow Audit and Tool Setup__Fardin.docx`](doc/Week-01/AI%20Workflow%20Audit%20and%20Tool%20Setup__Fardin.docx)
-* **Action Brief 1:** LightGBM Positive Weight Calibration — [`Action_Brief__lightgbm_scale_pos_weight_vs_balanc.md`](doc/Week-01/Action_Brief__lightgbm_scale_pos_weight_vs_balanc.md)
-* **Action Brief 2:** DuckDB GroupKFold Cross-Validation — [`Action_Brief__python_duckdb_groupkfold_cross_vali.md`](doc/Week-01/Action_Brief__python_duckdb_groupkfold_cross_vali.md)
-* **Sitemap & Toolkit:** Draw the Path — [`Fardin__Portfolio_Sitemap_and_Toolkit.docx`](doc/Week-01/Fardin__Portfolio_Sitemap_and_Toolkit.docx) | [`.md`](doc/Week-01/Fardin__Portfolio_Sitemap_and_Toolkit.md)
-* **Visual Asset:** Sitemap Flow Diagram — [`sitemap_sketch.png`](doc/Week-01/sitemap_sketch.png)
-* **Claim Definition:** What Are You Proving? — [`Fardin__What_Are_You_Proving.docx`](doc/Week-01/Fardin__What_Are_You_Proving.docx) | [`.md`](doc/Week-01/Fardin__What_Are_You_Proving.md)
-
-### [Week 02: Prompt Engineering & Case Anchoring](doc/Week-02/)
-* **FL-02:** Prompting Fundamentals on Real Tasks v2 — [`Fardin__Prompting_Fundamentals_on_Real_Tasks_v2.docx`](doc/Week-02/Fardin__Prompting_Fundamentals_on_Real_Tasks_v2.docx) | [`.md`](doc/Week-02/Fardin__Prompting_Fundamentals_on_Real_Tasks_v2.md)
-* **Technique Ladder:** The Prompt Ladder — [`Fardin__The_Prompt_Ladder.docx`](doc/Week-02/Fardin__The_Prompt_Ladder.docx) | [`.md`](doc/Week-02/Fardin__The_Prompt_Ladder.md)
-* **Case Studies:** Frame It as Cases: Work That Speaks for Itself — [`Fardin__Framed_Cases_Work_That_Speaks_For_Itself.docx`](doc/Week-02/Fardin__Framed_Cases_Work_That_Speaks_For_Itself.docx) | [`.md`](doc/Week-02/Fardin__Framed_Cases_Work_That_Speaks_For_Itself.md)
-* **Visual Evidence:**
-  - Anthropic Tutorial Practice: [`fl02_anthropic_tutorial_screenshot.png`](doc/Week-02/fl02_anthropic_tutorial_screenshot.png)
-  - Claude 3.5 vs ChatGPT-4o Comparison: [`fl02_claude_vs_chatgpt_comparison.png`](doc/Week-02/fl02_claude_vs_chatgpt_comparison.png)
-  - Prompt Iteration & Step Decomposition: [`fl02_prompt_iteration_step_decomp.png`](doc/Week-02/fl02_prompt_iteration_step_decomp.png)
-  - Production Eval Extraction Card: [`fl02_prompt_eval_output.png`](doc/Week-02/fl02_prompt_eval_output.png)
-
-### [Week 03: Visual Identity & Content Flow](doc/Week-03/)
-* **Visual Identity:** Consistency, Not Talent — [`Fardin__Consistency_Not_Talent_Visual_Identity.docx`](doc/Week-03/Fardin__Consistency_Not_Talent_Visual_Identity.docx) | [`.md`](doc/Week-03/Fardin__Consistency_Not_Talent_Visual_Identity.md)
-* **Design Tokens:** Decide Once: Build Your Identity Kit — [`Fardin__Identity_Kit_Decide_Once.docx`](doc/Week-03/Fardin__Identity_Kit_Decide_Once.docx) | [`.md`](doc/Week-03/Fardin__Identity_Kit_Decide_Once.md)
-* **Image Curation:** Kill Your Darlings: Curate Your Images — [`Fardin__Curate_Your_Images_Kill_Your_Darlings.docx`](doc/Week-03/Fardin__Curate_Your_Images_Kill_Your_Darlings.docx) | [`.md`](doc/Week-03/Fardin__Curate_Your_Images_Kill_Your_Darlings.md)
-* **Storyline & Flow:** The Through-Line: Map Content & CTAs — [`Fardin__The_Through_Line_Map_Content_and_CTAs.docx`](doc/Week-03/Fardin__The_Through_Line_Map_Content_and_CTAs.docx) | [`.md`](doc/Week-03/Fardin__The_Through_Line_Map_Content_and_CTAs.md)
-* **Visual Assets & Identity Kit:**
-  - Monogram Wordmark: [`logo.svg`](doc/Week-03/logo.svg) & [`logo.png`](doc/Week-03/logo.png)
-  - Browser Favicon: [`favicon.svg`](doc/Week-03/favicon.svg) & [`favicon.png`](doc/Week-03/favicon.png)
-  - Verified Photo Capture: [`s.png`](doc/Week-03/s.png)
-  - DuckDB Terminal Real Capture: [`real_capture_duckdb_terminal.png`](doc/Week-03/real_capture_duckdb_terminal.png)
-  - Cost-Value Decision Matrix: [`real_capture_cost_value_matrix.png`](doc/Week-03/real_capture_cost_value_matrix.png)
-
-### [Week 04: Stack Selection, Early Ship & Automations](doc/Week-04/)
-* **Stack Decision:** Three Roads: Choose Your Stack with AI — [`Fardin__Three_Roads_Choose_Your_Stack.docx`](doc/Week-04/Fardin__Three_Roads_Choose_Your_Stack.docx) | [`.md`](doc/Week-04/Fardin__Three_Roads_Choose_Your_Stack.md)
-* **Initial Deployment:** Empty but Live: Ship a Blank Page — [`Fardin__Empty_But_Live_Ship_a_Blank_Page.docx`](doc/Week-04/Fardin__Empty_But_Live_Ship_a_Blank_Page.docx) | [`.md`](doc/Week-04/Fardin__Empty_But_Live_Ship_a_Blank_Page.md)
-* **FL-04:** Ship an Automation Workflow v2 — [`Fardin__FL04_Ship_Automation_Workflow_v2.docx`](doc/Week-04/Fardin__FL04_Ship_Automation_Workflow_v2.docx) | [`.md`](doc/Week-04/Fardin__FL04_Ship_Automation_Workflow_v2.md)
-* **FL-05:** Agent Concepts & MCP Basics — [`Fardin__FL05_Agent_Concepts_and_MCP_Basics.docx`](doc/Week-04/Fardin__FL05_Agent_Concepts_and_MCP_Basics.docx) | [`.md`](doc/Week-04/Fardin__FL05_Agent_Concepts_and_MCP_Basics.md)
-* **Visual Evidence:**
-  - Empty But Live Browser Capture: [`screenshot_empty_but_live.png`](doc/Week-04/screenshot_empty_but_live.png)
-  - Edge Rendering Capture: [`screenshot_empty_but_live_desktop.png`](doc/Week-04/screenshot_empty_but_live_desktop.png)
-
-### [Week 05: Production Hub & Agent Engineering](doc/Week-05/)
-* **PF-04:** Personal Website Live & DNS Setup — [`Fardin__PF04_Personal_Website_Live_and_DNS_Walkthrough.docx`](doc/Week-05/Fardin__PF04_Personal_Website_Live_and_DNS_Walkthrough.docx) | [`.md`](doc/Week-05/Fardin__PF04_Personal_Website_Live_and_DNS_Walkthrough.md)
-* **Technical Mastery:** Explain It Like You Built It — [`Fardin__Explain_It_Like_You_Built_It.docx`](doc/Week-05/Fardin__Explain_It_Like_You_Built_It.docx) | [`.md`](doc/Week-05/Fardin__Explain_It_Like_You_Built_It.md)
-* **FL-06:** Design Your Personal Agent — [`Fardin__FL06_Design_Your_Personal_Agent.docx`](doc/Week-05/Fardin__FL06_Design_Your_Personal_Agent.docx) | [`.md`](doc/Week-05/Fardin__FL06_Design_Your_Personal_Agent.md)
-* **FL-07:** Build the Agent MVP & Build Log — [`Fardin__FL07_Build_The_Agent_MVP_and_Build_Log.docx`](doc/Week-05/Fardin__FL07_Build_The_Agent_MVP_and_Build_Log.docx) | [`.md`](doc/Week-05/Fardin__FL07_Build_The_Agent_MVP_and_Build_Log.md)
-
-### [Week 06: Dynamic Features & Mobile QA](doc/Week-06/)
-* **Dynamic Widget:** Make It Do Something — [`Fardin__Make_It_Do_Something_Dynamic_Feature.docx`](doc/Week-06/Fardin__Make_It_Do_Something_Dynamic_Feature.docx) | [`.md`](doc/Week-06/Fardin__Make_It_Do_Something_Dynamic_Feature.md)
-* **Mobile Responsiveness:** Open It on Your Phone: Mobile QA — [`Fardin__Open_It_On_Your_Phone_Mobile_QA.docx`](doc/Week-06/Fardin__Open_It_On_Your_Phone_Mobile_QA.docx) | [`.md`](doc/Week-06/Fardin__Open_It_On_Your_Phone_Mobile_QA.md)
-* **Design Crit:** Survive the Crit: Peer Review — [`Fardin__Survive_The_Crit_Design_Review.docx`](doc/Week-06/Fardin__Survive_The_Crit_Design_Review.docx) | [`.md`](doc/Week-06/Fardin__Survive_The_Crit_Design_Review.md)
-
-### [Week 07: Adversarial Hardening & Launch Hygiene](doc/Week-07/)
-* **Adversarial QA:** Break Your Own Site: Hardening & SEO — [`Fardin__Break_Your_Own_Site_Adversarial_QA.docx`](doc/Week-07/Fardin__Break_Your_Own_Site_Adversarial_QA.docx) | [`.md`](doc/Week-07/Fardin__Break_Your_Own_Site_Adversarial_QA.md)
-* **Custom Domain & Badge:** Plant Your Flag — [`Fardin__Plant_Your_Flag_Domain_and_Badge.docx`](doc/Week-07/Fardin__Plant_Your_Flag_Domain_and_Badge.docx) | [`.md`](doc/Week-07/Fardin__Plant_Your_Flag_Domain_and_Badge.md)
-* **Visual Assets:**
-  - Open Graph Social Share Preview Card: [`social_share_preview_og.png`](doc/Week-07/social_share_preview_og.png)
-  - Browser Identity Icon: [`favicon.svg`](doc/Week-07/favicon.svg)
-
-### [Week 08: Showcase, Video Docs & Continuity Plan](doc/Week-08/)
-* **FL-09:** Agent Documentation and Demo Video — [`Fardin__FL09_Agent_Documentation_and_Demo_Video.docx`](doc/Week-08/Fardin__FL09_Agent_Documentation_and_Demo_Video.docx) | [`.md`](doc/Week-08/Fardin__FL09_Agent_Documentation_and_Demo_Video.md)
-* **Showcase:** Show It / Tell the Story — [`Fardin__Show_It_Tell_The_Story_Final_Showcase.docx`](doc/Week-08/Fardin__Show_It_Tell_The_Story_Final_Showcase.docx) | [`.md`](doc/Week-08/Fardin__Show_It_Tell_The_Story_Final_Showcase.md)
-* **Continuity Plan:** The Plan to Keep Building — [`Fardin__The_Plan_To_Keep_Building.docx`](doc/Week-08/Fardin__The_Plan_To_Keep_Building.docx) | [`.md`](doc/Week-08/Fardin__The_Plan_To_Keep_Building.md)
-
-### [Capstone: General AI Fluency Impact Project](doc/Capstone/)
-* **Option A:** Capstone Impact Project Report — [`Fardin__General_AI_Fluency_Impact_Project_Capstone.docx`](doc/Capstone/Fardin__General_AI_Fluency_Impact_Project_Capstone.docx) | [`.md`](doc/Capstone/Fardin__General_AI_Fluency_Impact_Project_Capstone.md)
-
-### [Master Track Guide](doc/Guides/)
-* **Full Curriculum Guide:** [`AI_Fluency_Complete_Guide.md`](doc/Guides/AI_Fluency_Complete_Guide.md)
-
----
-
-## Running the Autonomous Scouting Agent
-
-The repository includes the autonomous research agent built for **FL-07**:
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/fardinhossain/FlyRankAI-Internship-Portfolio-Fardin.git
+
+# 2. Enter directory
 cd FlyRankAI-Internship-Portfolio-Fardin
 
-# Run the scouting agent CLI
-python st_scout_agent.py
+# 3. Launch local static server
+python -m http.server 4175
 ```
-This runs an autonomous query across arXiv ML research, extracts benchmark abstracts, and outputs a structured Markdown executive brief directly to terminal or file.
+
+Navigate to **`http://localhost:4175`** in your browser.
 
 ---
-*Created by Fardin Hossain • FlyRank AI Track Deliverables 2026*
+
+## 📬 Contact & Connect
+
+* **Portfolio Website:** [flyrankai-ml-internship-task.vercel.app](https://flyrankai-ml-internship-task.vercel.app)
+* **Email:** [fardin.hosn@gmail.com](mailto:fardin.hosn@gmail.com)
+* **GitHub:** [@fardinhossain](https://github.com/fardinhossain)
+* **FlyRank Verified Credential:** [Verify Token FR-D1-T668H-R789R](https://internship.flyrank.ai/verify?id=FR-D1-T668H-R789R&first_name=Fardin)
+
+---
+
+<div align="center">
+  <sub>Designed & engineered with modern standards by <strong>Md. Fardin Hossain</strong>. Released under the <a href="LICENSE">MIT License</a>.</sub>
+</div>
